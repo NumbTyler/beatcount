@@ -1,0 +1,307 @@
+body {
+
+    font-family: Franklin Gothic Medium;
+    color:#000;
+    margin:0 auto;
+    text-align:left;
+    width:100%;
+    background:#000;
+}
+a:visited {
+  color:silver
+  }
+.Box {
+  width:135px;
+  height:68px;
+  position: absolute;
+  margin-left:750px;
+  margin-top:190px;
+  z-index:1;
+  background-color:#000;
+}
+
+/*.Mixer {
+  
+  width:120px;
+  height:150px;
+  position: absolute;
+  margin-left:1150px;
+  margin-top:400px;
+  z-index:1;
+  background-color:#2A2A2A; 
+}*/
+
+.BeatBox {
+  
+  width:46px;
+  height:68px;
+  position: absolute;
+  margin-left:1185px;
+  margin-top:190px;
+  z-index:1;
+  background-color:hsla(180, 100%, 100%, 0.2); /*hsla(180, 100%, 100%, 0.2)*/
+}
+
+#Beatpic {
+  
+  width:120px;
+  height:120px;
+  position: absolute;
+  margin-left:1000px;
+  margin-top:430px;
+  z-index:2;
+}
+
+#Beatpic2 {
+  
+  width:120px;
+  height:120px;
+  position: absolute;
+  margin-left:1300px;
+  margin-top:430px;
+  z-index:2;
+}
+
+#Beat1 {
+  
+  width:50px;
+  height:50px;
+  position: absolute;
+  margin-left:550px;
+  margin-top:280px;
+  z-index:2;
+}
+
+#Beat2 {
+  
+  width:50px;
+  height:50px;
+  position: absolute;
+  margin-left:550px;
+  margin-top:330px;
+  z-index:2;
+}
+
+#Beat3 {
+  
+  width:50px;
+  height:50px;
+  position: absolute;
+  margin-left:500px;
+  margin-top:330px;
+  z-index:2;
+}
+
+#Beat4 {
+  
+  width:50px;
+  height:50px;
+  position: absolute;
+  margin-left:500px;
+  margin-top:280px;
+  z-index:2;
+}
+
+div.icon div.play {
+	position:absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent #36F906;
+	opacity:0.7;
+    border-width: 12px 12px 12px 18px;
+    margin: 477px 0 0 1353px;
+	z-index:2;
+}
+
+div.icon div.pause {
+	position:absolute;
+    width: 4px;
+    height: 20px;
+    border: 6px solid #fff;
+    border-top: none;
+    border-bottom: none;
+    margin: 480px 0 0 1052px;
+	z-index:3;
+}
+
+@-webkit-keyframes pulse {
+ from {
+   opacity: 1.0;/*透明度100%*/
+ }
+ to {
+   opacity: 0;/*透明度80%*/
+ }
+}
+@-webkit-keyframes pulse2 {
+ from {
+   opacity: 1.0;/*透明度100%*/
+ }
+ to {
+   opacity: 0.8;/*透明度80%*/
+ }
+}
+.blinking{
+-webkit-animation-name: pulse;/* 実行する名前 */
+-webkit-animation-duration: 0.234375s;/* 秒かけて実行 */
+-webkit-animation-iteration-count:infinite;/* 何回実行するか。infiniteで無限 */
+-webkit-animation-timing-function:ease-in-out;/* イーズインアウト */
+-webkit-animation-direction: alternate;/* alternateにするとアニメーションが反復 */
+-webkit-animation-delay: 0s; /* 実行までの待ち時間 */
+}
+
+.blinking2{
+-webkit-animation-name: pulse;/* 実行する名前 */
+-webkit-animation-duration: 0.234375s;/* 0.3秒かけて実行 */
+-webkit-animation-iteration-count:infinite;/* 何回実行するか。infiniteで無限 */
+
+-webkit-animation-direction: alternate;/* alternateにするとアニメーションが反復 */
+-webkit-animation-delay: 0s; /* 実行までの待ち時間 */
+}
+
+#Beat {
+	position: absolute;
+	top: 293px;
+	left: 1200px;
+    font-size: 25px;
+    background: transparent;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+	z-index:0;
+}
+
+#Bar {
+	position: absolute;
+	top: 338px;
+	left: 1200px;
+    font-size: 25px;
+    background: transparent;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+	z-index:0;
+}
+
+#BeatCount {
+	position: absolute;
+	top: 293px;
+	left: 1000px;
+    font-size: 25px;
+    background: transparent;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+	z-index:0;
+}
+
+#Bars {
+	position: absolute;
+	top: 338px;
+	left: 1000px;
+    font-size: 25px;
+    background: transparent;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+	z-index:0;
+}
+
+
+video {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	right: 0;
+	bottom: 600px;
+	margin: auto;
+	width: 1000px;
+	height: 600px;
+	z-index: -1;
+}
+
+table.type10 {
+	position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto; 
+  margin-bottom: auto;
+	width: 450px;
+	color: #fff;
+	border-collapse: collapse;
+	text-align: center;
+	line-height: 1.5;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #000;
+	z-index: 1;
+}
+table.type10 thead th {
+	width: 300px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #fff;
+	background: #000;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+table.type10 td {
+	color: #fff;
+	width: 350px;
+	padding: 10px;
+	vertical-align: top;
+	background: #000;
+		border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+table.type10 .even {
+	color: #fff;
+	background: #000;
+		border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+#List {
+	position: absolute;
+	top: 271px;
+	left: 950px;
+	width:500px;
+	height:120px;
+	z-index:0;
+}
+table.type11 {
+	position: absolute;
+	top: 300px;
+	left: 900px;
+	right: 0;
+	bottom: 600px;
+	height:100px;
+	width: 500px;
+	color: #FF570B;
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	background: #585858;
+	z-index: 1;
+	border-radius: 10px;
+}
+
+table.type11 thead th {
+	width: 300px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #fff;
+	background: #252323;
+	border-radius: 10px;
+}
+table.type11 td {
+	color: #FF570B;
+	width: 350px;
+	vertical-align: top;
+	background: #585858;
+}
+table.type11 .even {
+	color: #FF570B;
+	background: #AFAFAF;
+}

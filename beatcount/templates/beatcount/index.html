@@ -1,0 +1,211 @@
+{% extends 'beatcount/base2.html' %}
+{% block content %}
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">BeatCountApp</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Reload</span>
+          </a>
+        </li>
+        
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            <a class="nav-link" href="practice.html">
+                <i class="fa fa-fw fa-file"></i>
+                <span class="nav-link-text">Practice</span>
+            </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Top Pages</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="jap_page.html">Japanese Top Page</a>
+            </li>
+            <li>
+              <a href="eng_page.html">English Top Page</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="lang_select.html">Language Select</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="jap_page.html">Top Page</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="test_page.html">Test</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="practice.html">Practice</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html">Index</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Example Bar Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i> Numbers of Correct Answers by Tracks</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-8 my-auto">
+
+                  <canvas id="myBarChart" width="100" height="50"></canvas>
+                  {% for answer in answers %}
+
+                  <input type="hidden" id="Ansname{{ answer.id }}" value= "{{ answer.name }}"></input>
+
+                  {% endfor %}
+                  <input type="hidden" id="Correct1" value="{{ sum1 }}"></input>
+                  <input type="hidden" id="Correct2" value="{{ sum2 }}"></input>
+                  <input type="hidden" id="Correct3" value="{{ sum3 }}"></input>
+                  <input type="hidden" id="Correct4" value="{{ sum4 }}"></input>
+                  <input type="hidden" id="Correct5" value="{{ sum5 }}"></input>
+                  <input type="hidden" id="Correct6" value="{{ sum6 }}"></input>
+                  <input type="hidden" id="Correct7" value="{{ sum7 }}"></input>
+                  <input type="hidden" id="Correct8" value="{{ sum8 }}"></input>
+                  <input type="hidden" id="Correct9" value="{{ sum9 }}"></input>
+                  <input type="hidden" id="Correct10" value="{{ sum10 }}"></input>
+                  <input type="hidden" id="Correct11" value="{{ sum11 }}"></input>
+                  <input type="hidden" id="Correct12" value="{{ sum12 }}"></input>
+                  <input type="hidden" id="Correct13" value="{{ sum13 }}"></input>
+                  <input type="hidden" id="Correct14" value="{{ sum14 }}"></input>
+                  <input type="hidden" id="Correct15" value="{{ sum15 }}"></input>
+                  <input type="hidden" id="Correct16" value="{{ sum16 }}"></input>
+                  <input type="hidden" id="Correct17" value="{{ sum17 }}"></input>
+                  <input type="hidden" id="Correct18" value="{{ sum18 }}"></input>
+                  <input type="hidden" id="Correct19" value="{{ sum19 }}"></input>
+                  <input type="hidden" id="Correct20" value="{{ sum20 }}"></input>
+                  <input type="hidden" id="Correct21" value="{{ sum21 }}"></input>
+                  <input type="hidden" id="Correct22" value="{{ sum22 }}"></input>
+                  <input type="hidden" id="Correct23" value="{{ sum23 }}"></input>
+                  <input type="hidden" id="Correct24" value="{{ sum24 }}"></input>
+                  <input type="hidden" id="Correct25" value="{{ sum25 }}"></input>
+                  <input type="hidden" id="Correct26" value="{{ sum26 }}"></input>
+                  <input type="hidden" id="Correct27" value="{{ sum27 }}"></input>
+                  <input type="hidden" id="Correct28" value="{{ sum28 }}"></input>
+                  <input type="hidden" id="Correct29" value="{{ sum29 }}"></input>
+                  <input type="hidden" id="Correct30" value="{{ sum30 }}"></input>
+                  <input type="hidden" id="Correct31" value="{{ sum31 }}"></input>
+                  <input type="hidden" id="Correct32" value="{{ sum32 }}"></input>
+                  <input type="hidden" id="Correct33" value="{{ sum33 }}"></input>
+                  <input type="hidden" id="Correct34" value="{{ sum34 }}"></input>
+                  <input type="hidden" id="Correct35" value="{{ sum35 }}"></input>
+                  <input type="hidden" id="Correct36" value="{{ sum36 }}"></input>
+                  <input type="hidden" id="Correct37" value="{{ sum37 }}"></input>
+                  <input type="hidden" id="Correct38" value="{{ sum38 }}"></input>
+                  <input type="hidden" id="Correct39" value="{{ sum39 }}"></input>
+                  <input type="hidden" id="Correct40" value="{{ sum40 }}"></input>
+                </div>
+                <div class="col-sm-4 text-center my-auto">
+                    <div class="h4 mb-0 text-primary">{{ user_count }}</div>
+                    <div class="small text-muted">All Users</div>
+                    <!--<hr>
+                    <div class="h4 mb-0 text-warning">{{ sum40 }}</div>
+                    <div class="small text-muted">{{ sum39 }}</div>
+                    <hr>
+                    <div class="h4 mb-0 text-success">$16,219</div>
+                    <div class="small text-muted">YTD Margin</div>-->
+                </div>
+              </div>
+            </div>
+            <div type="text" id="currentTime" class="card-footer small text-muted" onload="Time()" value ="" >Updated</div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- Example Pie Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i> Users Music Experience </div>
+            <div class="card-body">
+              <canvas id="myPieChart" width="100%" height="100"></canvas>
+              <input type="hidden" id="dj_count" value= "{{ dj_count }}"></input>
+              <input type="hidden" id="piano_count" value= "{{ piano_count }}"></input>
+              <input type="hidden" id="guitar_count" value= "{{ guitar_count }}"></input>
+              <input type="hidden" id="bass_count" value= "{{ bass_count }}"></input>
+              <input type="hidden" id="drum_count" value= "{{ drum_count }}"></input>
+              <input type="hidden" id="brass_count" value= "{{ brass_count }}"></input>
+              <input type="hidden" id="strings_count" value= "{{ strings_count }}"></input>
+              <input type="hidden" id="dance_count" value= "{{ dance_count }}"></input>
+              <input type="hidden" id="others_count" value= "{{ others_count }}"></input>
+              <input type="hidden" id="noex_count" value= "{{ noex_count }}"></input>
+            </div>
+            <div class="card-footer small text-muted">Updated</div>
+          </div>
+        </div>
+      </div>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> All Users Info</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Sex</th>
+                  <th>Status</th>
+                  <th>Correct</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tfoot>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Status</th>
+                    <th>Correct</th>
+                    <th>Date</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                  {% for answer in answers %}
+                <tr>
+                  <td>{{ answer.name }}</td>
+                  <td>{{ answer.age }}</td>
+                  <td>{{ answer.sex }}</td>
+                  <td>{{ answer.status }}</td>
+                  <td>{{ answer.correct }}</td>
+                  <td>{{ answer.created_date }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated {{ answer.created_date }}</div>
+      </div>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+  </div>
+</body>
+
+{% endblock content %}

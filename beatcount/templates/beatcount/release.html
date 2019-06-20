@@ -1,0 +1,182 @@
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<section id="about" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>リリース課題：5問</h2>
+            <p>　それでは1つ目の調査を行います．今から一般で広くリリースされている5つのパターンの楽曲を聴いてもらいます．その際に，曲中に登場する曲調の変化のポイント，つまり1小節目の1拍目だと思った箇所を見つけて，ここだと思った位置でHITボタンを入力して回答してください．
+                それでは問題を開始します．
+                
+                </p>
+                <a href="#track01" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track01" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 1</h2>
+                <audio id="soundR1" action="beatcount/views.py">
+                    <source src="{% static 'media/1 Release Track BPM 128.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="playR1" onClick ="PlayTrackR1();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track02" class="btn btn-default btn-lg">
+                            <span id="hitR1" onClick ="judgeR1();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track02" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 2</h2>
+                <audio id="soundR2">
+                    <source src="{% static 'media/2 Release Track BPM 128.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="playR2" onClick ="PlayTrackR2();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track03" class="btn btn-default btn-lg">
+                            <span id="hitR2" onClick ="judgeR2();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track03" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 3</h2>
+                <audio id="soundR3">
+                    <source src="{% static 'media/3 Release Track BPM 110.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playR3" onClick ="PlayTrackR3();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track04" class="btn btn-default btn-lg">
+                            <span id="hitR3" onClick ="judgeR3();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track04" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 4</h2>
+                
+                <audio id="soundR4">
+                    <source src="{% static 'media/4 Release Track BPM 100.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playR4" onClick ="PlayTrackR4();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track05" class="btn btn-default btn-lg">
+                            <span id="hitR4" onClick ="judgeR4();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track05" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 5</h2>
+                
+                <audio id="soundR5" >
+                    <source src="{% static 'media/5 Release Track BPM 90.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playR5" onClick ="PlayTrackR5();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#finish" class="btn btn-default btn-lg">
+                            <span id="hitR5" onClick ="judgeR5();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="finish" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <p>
+                問題は以上になります．回答ありがとうございます．
+                これから5分間の休憩を取ります．その後，後半の問題に回答していただきます．
+                </p>
+                <h2>本課題開始</h2>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="test_page.html" class="btn btn-default btn-lg">
+                            <span class="network-name">Move</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+

@@ -1,0 +1,126 @@
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <body id="page-top">
+                                        
+        <!-- Intro Header -->
+        <header class="masthead">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h1 class="brand-heading">Counting Beats Ability</h1>
+                            <p class="intro-text">ビートカウント能力評価指標
+                            <br>Start Experiment</p>
+                            <a href="#about" class="btn btn-circle js-scroll-trigger">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- About Section -->
+        <section id="about" class="content-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>はじめに</h2>
+                        <p>　私達は，音楽に関する様々な研究を行っています．今回はその一環として，あなたの音楽に関する能力を用いて２つの課題に取り組んでいただきます．
+                        今回の実験では「途中から再生された曲を聴きながら曲調の変化するポイントである1小節目の1拍目を見つける」という作業をしてもらいます．
+                        実験を行う前に，音楽の小節や拍の感覚を分かっていただくために，実際の楽曲と動画を用いて説明します．
+                        
+                        </p>
+                            <a href="#explain" class="btn btn-circle js-scroll-trigger">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Download Section -->
+        <section id="explain" class="download-section content-section text-center">
+            <div class="container">
+                <div class="col-lg-8 mx-auto">
+                    <h2>楽曲の構造，小節について</h2>
+                    <p>  実験を行う前に，音楽の小節や拍の感覚を分かっていただくために，実際の楽曲を用いて説明します．
+                    </p>
+                    <p>  クラシック音楽等を除いた，一般にリリースされている楽曲のほとんどが，8小節１つの区切りとして，曲調が変化するように制作されています．そういった楽曲内では，8小節のサビの後に，2小節程余韻があって次のAメロに移るといった小節構造をとる部分もありますが，基本的にはAメロ8小節，Bメロ8小節，サビ8小節という風に8小節を１つの目安として曲調が変化するように制作されています．能力が備わっている人であれば，楽曲内の複雑な小節構造をとる部分でも，曲調の変化を頼りに正確に聴き取ることができます．DJはこのように，曲調の変化位置，1小節目の1拍目を聴き取る動作をプレイ中に繰り返しおこなっています．本実験で使用する楽曲では，全ての楽曲において8小節感覚で曲調が変化する部分を使用しています．みなさんにはその位置を聴き取っていただきます．
+                    
+                    </p>
+                    <video id="video" controls>
+                        <source src="{% static 'media/Intro Movie.mp4' %}"></source>
+                    </video>
+                    <p>注：本番では波形やカウントは表示されません</p>
+                </div>
+            </div>
+            <a href="#howto" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="howto" class="content-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>課題内容</h2>
+                        <p>  これから，みなさんには2つの調査を行なってもらいます．まずは一般にリリースされている楽曲5曲を用いた問題に回答していただいた後，休憩をとり，練習問題に回答していただき，その後行う本課題がどういったものか把握していただきます．その後私たちが作成した課題楽曲を用いた40問に回答していただきます．
+                        </p>
+<!--                        <ul class="list-inline banner-social-buttons">-->
+<!--                            <li class="list-inline-item">-->
+<!--                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">-->
+<!--                                    <i class="fa fa-twitter fa-fw"></i>-->
+<!--                                    <span class="network-name">Twitter</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="list-inline-item">-->
+<!--                                <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">-->
+<!--                                    <i class="fa fa-github fa-fw"></i>-->
+<!--                                    <span class="network-name">Github</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="list-inline-item">-->
+<!--                                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">-->
+<!--                                    <i class="fa fa-google-plus fa-fw"></i>-->
+<!--                                    <span class="network-name">Google+</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+                        <a href="#start" class="btn btn-circle js-scroll-trigger">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="start" class="content-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>練習問題へ</h2>
+                        <ul class="list-inline banner-social-buttons">
+                            <li class="list-inline-item">
+                                <a href="practice.html" class="btn btn-default btn-lg">
+                                    <span class="network-name">Move</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Map Section-->
+        <div id="map"></div>
+    
+        
+
+    </body>
+
+{% endblock content %}
+
+

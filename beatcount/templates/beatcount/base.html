@@ -1,0 +1,82 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+                        
+        <title>Beat Count Metrics</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'bootstrap/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+                            
+        <!-- Custom fonts for this template -->
+        <link href="{% static 'bootstrap/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet" type="text/css">
+            
+        <!-- Custom styles for this template-->
+        <link href="{% static 'bootstrap/css/grayscale.min.css' %}" rel="stylesheet">
+        <!--<link href="{% static 'bootstrap/css/grayscale.css' %}" rel="stylesheet">-->
+        
+            <!-- Bootstrap core JavaScript -->
+            <script src="{% static 'bootstrap/vendor/jquery/jquery.min.js' %}"></script>
+            <script src="{% static 'bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+            
+            <!-- Plugin JavaScript -->
+            <script src="{% static 'bootstrap/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+            
+            <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV8wN70TcA4LdLNHxs3AEfLhFDrDYmJd8&sensor=false"></script>
+            <!-- Chart-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+            <!-- Custom scripts for this template -->
+            <script src="{% static 'bootstrap/js/grayscale.min.js' %}"></script>
+            <script src="{% static 'bootstrap/js/BCESystem.js' %}"></script>
+    </head>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">BeatCountApp</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="lang_select.html">Language Select</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="jap_page.html">Top Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="test_page.html">Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="practice.html">Practice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html">Index</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kazuhiro Minami - Ritsumeikan Univ. Social Communication Lab. 2018
+            </p>
+        </div>
+    </footer>
+
+</html>
+

@@ -1,0 +1,126 @@
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<section id="about" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>練習問題</h2>
+                <p>　それでは，練習問題に取り組んでいただきます．今回の実験で用いる全問題では，約1分間の楽曲が曲の途中から再生されます．再生された曲を聴いて，あなたが1小節目の1拍目だと認識した部分で回答していただきます．回答はPlayボタンを入力して楽曲を再生し，正解だと思ったタイミングで，HITボタンを入力して回答を行います．HITボタンの入力と同時に次の問題に移動します．
+                練習，本課題楽曲中では，1小節目の1拍目が２回登場します．1度目を回答し逃しても，1度目の位置を基準としてそこから小節数を数え，8小節が終わった次の正解位置で回答していただければ正解となります．また，練習問題ではその場で正解，不正解のアラートが表示されます．本番では表示されません．
+                
+                </p>
+                <a href="#track01" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track01" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 1</h2>
+                <audio id="sound01" action="beatcount/views.py">
+                    <source src="{% static 'media/Training 1 BPM 128.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="play01" onClick ="PlayTrack01();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track02" class="btn btn-default btn-lg">
+                            <span id="hit01" onClick ="judge00();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track02" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 2</h2>
+                <audio id="sound02">
+                    <source src="{% static 'media/Training 2 BPM 110.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="play02" onClick ="PlayTrack02();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track03" class="btn btn-default btn-lg">
+                            <span id="hit02" onClick ="judge02();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track03" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 3</h2>
+                <audio id="sound03">
+                    <source src="{% static 'media/Training 3 BPM 128.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play03" onClick ="PlayTrack03();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#finish" class="btn btn-default btn-lg">
+                            <span id="hit03" onClick ="judge03();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="finish" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <p>
+                問題では，速さの速い曲，遅い曲，ダンスミュージックやボーカル有りの曲など，様々な種類の楽曲がランダムで流れます．
+                このような楽曲の1拍目を探す問題をまず前半にリリース楽曲を用いて5問行ってもらいます．その後，5分間の休憩をはさんでから，後半に私たちが作成した課題40問を行います．
+                なお，これらは問題数も多く，時間もかかりますので，途中で気分が悪くなる等の不調を感じた場合，いつ中断していただいてもかまいません．その際は私に報告してください．
+                </p>
+                <h2>リリース課題開始</h2>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="release.html" class="btn btn-default btn-lg">
+                            <span class="network-name">Move</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+

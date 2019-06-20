@@ -1,0 +1,1382 @@
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<section id="Name" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Your Info</h2>
+                <h2>Name</h2>
+                <p><input type="text" name="user" maxlength="50" id="name" value=""/></p>
+                <h2>Age</h2>
+                <p><input type="text" name="age" maxlength="20" id="age" value=""/></p>
+                
+                <h2>Sex</h2>
+                <p>
+                <select name="Sex" id="sex" value="">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                </p>
+
+                <h2>Status</h2>
+                <p>
+                    <select name="MusicExp" id="status" value="">
+                        <option value="DJ">DJ</option>
+                        <option value="Piano">Piano/Keybord</option>
+                        <option value="Guitar">Guitar</option>
+                        <option value="Bass">Bass</option>
+                        <option value="Drum">Drum</option>
+                        <option value="Dance">Dance</option>
+                        <option value="Brass">Brass</option>
+                        <option value="Strings">Strings</option>
+                        <option value="Others">Others</option>
+                        <option value="Noex">No Experience</option>
+                    </select>
+                </p>
+                    
+                    
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track1" class="btn btn-default btn-lg">
+                            <span id="hit" onClick ="InfoInput();" class="network-name">Start</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track1" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 1</h2>
+                <audio id="sound1" action="beatcount/views.py">
+                    <source src="{% static 'media/3 Test Track 41 BPM 110.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="play1" onClick ="PlayTrack1();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track2" class="btn btn-default btn-lg">
+                            <span id="hit1" onClick ="judge();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track2" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 2</h2>
+                <audio id="sound2">
+                    <source src="{% static 'media/5 Test Track 36 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="play2" onClick ="PlayTrack2();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track3" class="btn btn-default btn-lg">
+                            <span id="hit2" onClick ="judge2();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track3" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 3</h2>
+                <audio id="sound3">
+                    <source src="{% static 'media/1 Test Track 26 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play3" onClick ="PlayTrack3();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track4" class="btn btn-default btn-lg">
+                            <span id="hit3" onClick ="judge3();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track4" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 4</h2>
+                
+                <audio id="sound4">
+                    <source src="{% static 'media/2 Test Track 16 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play4" onClick ="PlayTrack4();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track5" class="btn btn-default btn-lg">
+                            <span id="hit4" onClick ="judge4();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track5" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 5</h2>
+        
+                <audio id="sound5" >
+                    <source src="{% static 'media/2 Test Track 25 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play5" onClick ="PlayTrack5();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track6" class="btn btn-default btn-lg">
+                            <span id="hit5" onClick ="judge5();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track6" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 6</h2>
+                
+                <audio id="sound6" >
+                    <source src="{% static 'media/3 Test Track 45 BPM 72.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play6" onClick ="PlayTrack6();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track7" class="btn btn-default btn-lg">
+                            <span id="hit6" onClick ="judge6();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track7" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 7</h2>
+                
+                <audio id="sound7" >
+                    <source src="{% static 'media/4 Test Track 46 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play7" onClick ="PlayTrack7();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track8" class="btn btn-default btn-lg">
+                            <span id="hit7" onClick ="judge7();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track8" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 8</h2>
+                
+                <audio id="sound8" >
+                    <source src="{% static 'media/1 Test Track 27 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play8" onClick ="PlayTrack8();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track9" class="btn btn-default btn-lg">
+                            <span id="hit8" onClick ="judge8();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track9" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 9</h2>
+                
+                <audio id="sound9" >
+                    <source src="{% static 'media/1 Test Track 29 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play9" onClick ="PlayTrack9();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track10" class="btn btn-default btn-lg">
+                            <span id="hit9" onClick ="judge9();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track10" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 10</h2>
+                
+                <audio id="sound10" >
+                    <source src="{% static 'media/2 Test Track 21 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play10" onClick ="PlayTrack10();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track11" class="btn btn-default btn-lg">
+                            <span id="hit10" onClick ="judge10();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track11" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 11</h2>
+                
+                <audio id="sound11" >
+                    <source src="{% static 'media/5 Test Track 33 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play11" onClick ="PlayTrack11();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track12" class="btn btn-default btn-lg">
+                            <span id="hit11" onClick ="judge11();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track12" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 12</h2>
+                
+                <audio id="sound12" >
+                    <source src="{% static 'media/1 Test Track 12 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play12" onClick ="PlayTrack12();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track13" class="btn btn-default btn-lg">
+                            <span id="hit12" onClick ="judge12();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track13" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 13</h2>
+                
+                <audio id="sound13" >
+                    <source src="{% static 'media/5 Test Track 31 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play13" onClick ="PlayTrack13();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track14" class="btn btn-default btn-lg">
+                            <span id="hit13" onClick ="judge13();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track14" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 14</h2>
+                
+                <audio id="sound14" >
+                    <source src="{% static 'media/2 Test Track 24 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play14" onClick ="PlayTrack14();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track15" class="btn btn-default btn-lg">
+                            <span id="hit14" onClick ="judge14();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track15" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 15</h2>
+                
+                <audio id="sound15" >
+                    <source src="{% static 'media/1 Test Track 1 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play15" onClick ="PlayTrack15();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track16" class="btn btn-default btn-lg">
+                            <span id="hit15" onClick ="judge15();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track16" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 16</h2>
+                
+                <audio id="sound16" >
+                    <source src="{% static 'media/5 Test Track 32 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play16" onClick ="PlayTrack16();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track17" class="btn btn-default btn-lg">
+                            <span id="hit16" onClick ="judge16();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track17" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 17</h2>
+                
+                <audio id="sound17" >
+                    <source src="{% static 'media/5 Test Track 40 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play17" onClick ="PlayTrack17();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track18" class="btn btn-default btn-lg">
+                            <span id="hit17" onClick ="judge17();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track18" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 18</h2>
+                
+                <audio id="sound18" >
+                    <source src="{% static 'media/4 Test Track 48 BPM 98.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play18" onClick ="PlayTrack18();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track19" class="btn btn-default btn-lg">
+                            <span id="hit18" onClick ="judge18();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track19" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 19</h2>
+                
+                <audio id="sound19" >
+                    <source src="{% static 'media/2 Test Track 19 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play19" onClick ="PlayTrack19();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track20" class="btn btn-default btn-lg">
+                            <span id="hit19" onClick ="judge19();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track20" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 20</h2>
+                
+                <audio id="sound20" >
+                    <source src="{% static 'media/4 Test Track 47 BPM 101.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play20" onClick ="PlayTrack20();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track21" class="btn btn-default btn-lg">
+                            <span id="hit20" onClick ="judge20();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track21" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 21</h2>
+                
+                <audio id="sound21" >
+                    <source src="{% static 'media/1 Test Track 18 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play21" onClick ="PlayTrack21();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track22" class="btn btn-default btn-lg">
+                            <span id="hit21" onClick ="judge21();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track22" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 22</h2>
+                
+                <audio id="sound22" >
+                    <source src="{% static 'media/2 Test Track 17 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play22" onClick ="PlayTrack22();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track23" class="btn btn-default btn-lg">
+                            <span id="hit22" onClick ="judge22();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track23" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 23</h2>
+                
+                <audio id="sound23" >
+                    <source src="{% static 'media/4 Test Track 50 BPM 112.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play23" onClick ="PlayTrack23();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track24" class="btn btn-default btn-lg">
+                            <span id="hit23" onClick ="judge23();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track24" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 24</h2>
+                
+                <audio id="sound24" >
+                    <source src="{% static 'media/1 Test Track 4 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play24" onClick ="PlayTrack24();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track25" class="btn btn-default btn-lg">
+                            <span id="hit24" onClick ="judge24();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track25" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 25</h2>
+                
+                <audio id="sound25" >
+                    <source src="{% static 'media/2 Test Track 8 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play25" onClick ="PlayTrack25();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track26" class="btn btn-default btn-lg">
+                            <span id="hit25" onClick ="judge25();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track26" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 26</h2>
+                
+                <audio id="sound26" >
+                    <source src="{% static 'media/5 Test Track 35 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play26" onClick ="PlayTrack26();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track27" class="btn btn-default btn-lg">
+                            <span id="hit26" onClick ="judge26();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track27" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 27</h2>
+                
+                <audio id="sound27" >
+                    <source src="{% static 'media/2 Test Track 30 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play27" onClick ="PlayTrack27();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track28" class="btn btn-default btn-lg">
+                            <span id="hit27" onClick ="judge27();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track28" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 28</h2>
+                
+                <audio id="sound28" >
+                    <source src="{% static 'media/5 Test Track 38 BPM 95.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play28" onClick ="PlayTrack28();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track29" class="btn btn-default btn-lg">
+                            <span id="hit28" onClick ="judge28();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track29" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 29</h2>
+                
+                <audio id="sound29" >
+                    <source src="{% static 'media/3 Test Track 42 BPM 110.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play29" onClick ="PlayTrack29();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track30" class="btn btn-default btn-lg">
+                            <span id="hit29" onClick ="judge29();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track30" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 30</h2>
+                
+                <audio id="sound30" >
+                    <source src="{% static 'media/5 Test Track 37 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play30" onClick ="PlayTrack30();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track31" class="btn btn-default btn-lg">
+                            <span id="hit30" onClick ="judge30();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track31" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 31</h2>
+                
+                <audio id="sound31" >
+                    <source src="{% static 'media/3 Test Track 43 BPM 110.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play31" onClick ="PlayTrack31();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track32" class="btn btn-default btn-lg">
+                            <span id="hit31" onClick ="judge31();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track32" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 32</h2>
+                
+                <audio id="sound32" >
+                    <source src="{% static 'media/5 Test Track 39 BPM 95.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play32" onClick ="PlayTrack32();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track33" class="btn btn-default btn-lg">
+                            <span id="hit32" onClick ="judge32();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track33" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 33</h2>
+                
+                <audio id="sound33" >
+                    <source src="{% static 'media/2 Test Track 9 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play33" onClick ="PlayTrack33();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track34" class="btn btn-default btn-lg">
+                            <span id="hit33" onClick ="judge33();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track34" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 34</h2>
+                
+                <audio id="sound34" >
+                    <source src="{% static 'media/2 Test Track 5 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play34" onClick ="PlayTrack34();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track35" class="btn btn-default btn-lg">
+                            <span id="hit34" onClick ="judge34();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track35" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 35</h2>
+                
+                <audio id="sound35" >
+                    <source src="{% static 'media/1 Test Track 20 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play35" onClick ="PlayTrack35();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track36" class="btn btn-default btn-lg">
+                            <span id="hit35" onClick ="judge35();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track36" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 36</h2>
+                
+                <audio id="sound36" >
+                    <source src="{% static 'media/1 Test Track 22 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play36" onClick ="PlayTrack36();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track37" class="btn btn-default btn-lg">
+                            <span id="hit36" onClick ="judge36();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track37" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 37</h2>
+                
+                <audio id="sound37" >
+                    <source src="{% static 'media/3 Test Track 44 BPM 112.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play37" onClick ="PlayTrack37();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track38" class="btn btn-default btn-lg">
+                            <span id="hit37" onClick ="judge37();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track38" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 38</h2>
+                
+                <audio id="sound38" >
+                    <source src="{% static 'media/4 Test Track 49 BPM 115.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play38" onClick ="PlayTrack38();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track39" class="btn btn-default btn-lg">
+                            <span id="hit38" onClick ="judge38();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track39" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 39</h2>
+                
+                <audio id="sound39" >
+                    <source src="{% static 'media/1 Test Track 15 BPM 128.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play39" onClick ="PlayTrack39();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track40" class="btn btn-default btn-lg">
+                            <span id="hit39" onClick ="judge39();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track40" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 40</h2>
+                
+                <audio id="sound40" >
+                    <source src="{% static 'media/5 Test Track 34 BPM 90.mp3' %}" type ="audio/mp3">
+                </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="play40" onClick ="PlayTrack40();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#finish" class="btn btn-default btn-lg">
+                            <span id="hit40" onClick ="judge40();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="finish" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Finish</h2>
+                <form type="hidden" method="POST" class="post-form" >
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default" href="index.html">Done</button>
+                </form>
+                
+                <!--<ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="post_edit.html" class="btn btn-default btn-lg">
+                            <span class="network-name">Done</span>
+                        </a>
+                    </li>
+                </ul>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--<form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default" href="lang_select.html">Done</button>
+</form>
+        <input type='hidden' name='csrfmiddlewaretoken' value='Y0UU8YqC9qQ8lvicDMEpzftHAoFkG55F0u6q6iYrZYtNwh2Iz35u33fAh9VvYIMg' />
+        <p><label for="id_user">User:</label> <select name="user" required id="id_user">
+            <option value="1" selected>nakatani</option></select>
+        <p><label for="id_name">Name:</label> <input type="text" name="name" maxlength="50" required id="id_name" /></p>
+        <p><label for="id_track1">Track1:</label> <input type="number" name="track1" required id="id_track1" value=""/></p>
+        <p><label for="id_track2">Track2:</label> <input type="number" name="track2" required id="id_track2" value=""/></p>
+        <p><label for="id_track3">Track3:</label> <input type="number" name="track3" required id="id_track3" value=""/></p>
+        <p><label for="id_track4">Track4:</label> <input type="number" name="track4" required id="id_track4" value=""/></p>
+        <p><label for="id_track5">Track5:</label> <input type="number" name="track5" required id="id_track5" value=""/></p>
+        <p><label for="id_track6">Track6:</label> <input type="number" name="track6" required id="id_track6" value=""/></p>
+        <p><label for="id_track7">Track7:</label> <input type="number" name="track7" required id="id_track7" value=""/></p>
+        <p><label for="id_track8">Track8:</label> <input type="number" name="track8" required id="id_track8" value=""/></p>
+        <p><label for="id_track9">Track9:</label> <input type="number" name="track9" required id="id_track9" value=""/></p>
+        <p><label for="id_track10">Track10:</label> <input type="number" name="track10" required id="id_track10" value=""/></p>
+        <p><label for="id_track11">Track11:</label> <input type="number" name="track11" required id="id_track11" value=""/></p>
+        <p><label for="id_track12">Track12:</label> <input type="number" name="track12" required id="id_track12" value=""/></p>
+        <p><label for="id_track13">Track13:</label> <input type="number" name="track13" required id="id_track13" value=""/></p>
+        <p><label for="id_track14">Track14:</label> <input type="number" name="track14" required id="id_track14" value=""/></p>
+        <p><label for="id_track15">Track15:</label> <input type="number" name="track15" required id="id_track15" value=""/></p>
+        <p><label for="id_track16">Track16:</label> <input type="number" name="track16" required id="id_track16" value=""/></p>
+        <p><label for="id_track17">Track17:</label> <input type="number" name="track17" required id="id_track17" value=""/></p>
+        <p><label for="id_track18">Track18:</label> <input type="number" name="track18" required id="id_track18" value=""/></p>
+        <p><label for="id_track19">Track19:</label> <input type="number" name="track19" required id="id_track19" value=""/></p>
+        <p><label for="id_track20">Track20:</label> <input type="number" name="track20" required id="id_track20" value=""/></p>
+        <p><label for="id_track21">Track21:</label> <input type="number" name="track21" required id="id_track21" value=""/></p>
+        <p><label for="id_track22">Track22:</label> <input type="number" name="track22" required id="id_track22" value=""/></p>
+        <p><label for="id_track23">Track23:</label> <input type="number" name="track23" required id="id_track23" value=""/></p>
+        <p><label for="id_track24">Track24:</label> <input type="number" name="track24" required id="id_track24" value=""/></p>
+        <p><label for="id_track25">Track25:</label> <input type="number" name="track25" required id="id_track25" value=""/></p>
+        <p><label for="id_track26">Track26:</label> <input type="number" name="track26" required id="id_track26" value=""/></p>
+        <p><label for="id_track27">Track27:</label> <input type="number" name="track27" required id="id_track27" value=""/></p>
+        <p><label for="id_track28">Track28:</label> <input type="number" name="track28" required id="id_track28" value=""/></p>
+        <p><label for="id_track29">Track29:</label> <input type="number" name="track29" required id="id_track29" value=""/></p>
+        <p><label for="id_track30">Track30:</label> <input type="number" name="track30" required id="id_track30" value=""/></p>
+        <p><label for="id_track31">Track31:</label> <input type="number" name="track31" required id="id_track31" value=""/></p>
+        <p><label for="id_track32">Track32:</label> <input type="number" name="track32" required id="id_track32" value=""/></p>
+        <p><label for="id_track33">Track33:</label> <input type="number" name="track33" required id="id_track33" value=""/></p>
+        <p><label for="id_track34">Track34:</label> <input type="number" name="track34" required id="id_track34" value=""/></p>
+        <p><label for="id_track35">Track35:</label> <input type="number" name="track35" required id="id_track35" value=""/></p>
+        <p><label for="id_track36">Track36:</label> <input type="number" name="track36" required id="id_track36" value=""/></p>
+        <p><label for="id_track37">Track37:</label> <input type="number" name="track37" required id="id_track37" value=""/></p>
+        <p><label for="id_track38">Track38:</label> <input type="number" name="track38" required id="id_track38" value=""/></p>
+        <p><label for="id_track39">Track39:</label> <input type="number" name="track39" required id="id_track39" value=""/></p>
+        <p><label for="id_track40">Track40:</label> <input type="number" name="track40" required id="id_track40" value=""/></p>
+        <button type="submit" class="save btn btn-default" href="lang_select.html">Save</button>
+    </form>-->
+
+<!--<?php
+    
+    ini_set('display_errors', 1);
+    
+    $track1 = $_GET['hit1'];
+    $track2 = $_GET['hit2'];
+    $track3 = $_GET['hit3'];
+    $track4 = $_GET['hit4'];
+    $track5 = $_GET['hit5'];
+    $track6 = $_GET['hit6'];
+    $track7 = $_GET['hit7'];
+    $track8 = $_GET['hit8'];
+    $track9 = $_GET['hit9'];
+    $track10 = $_GET['hit10'];
+    $track11 = $_GET['hit11'];
+    $track12 = $_GET['hit12'];
+    $track13 = $_GET['hit13'];
+    $track14 = $_GET['hit14'];
+    $track15 = $_GET['hit15'];
+    $track16 = $_GET['hit16'];
+    $track17 = $_GET['hit17'];
+    $track18 = $_GET['hit18'];
+    $track19 = $_GET['hit19'];
+    $track20 = $_GET['hit20'];
+    $track21 = $_GET['hit21'];
+    $track22 = $_GET['hit22'];
+    $track23 = $_GET['hit23'];
+    $track24 = $_GET['hit24'];
+    $track25 = $_GET['hit25'];
+    $track26 = $_GET['hit26'];
+    $track27 = $_GET['hit27'];
+    $track28 = $_GET['hit28'];
+    $track29 = $_GET['hit29'];
+    $track30 = $_GET['hit30'];
+    $track31 = $_GET['hit31'];
+    $track32 = $_GET['hit32'];
+    $track33 = $_GET['hit33'];
+    $track34 = $_GET['hit34'];
+    $track35 = $_GET['hit35'];
+    $track36 = $_GET['hit36'];
+    $track37 = $_GET['hit37'];
+    $track38 = $_GET['hit38'];
+    $track39 = $_GET['hit39'];
+    $track40 = $_GET['hit40'];
+    
+    $server = "mysql717.db.sakura.ne.jp";
+    $mydb = "socialcomm_beatcount";
+    $usr = "socialcomm";
+    $pass = "hg16cnzhj0";
+    
+    
+    //データベース接続
+    $link = mysql_connect($server, $usr, $pass);
+    mysql_query("SET NAMES utf8",$link);
+    $db = mysql_select_db($mydb, $link);
+    $result = mysql_query($query);
+    
+    
+    if($link){
+        print('データベースに接続しました');
+    }
+else{
+    print('データベースに接続できません');
+}
+
+$track1 = $_POST['hit1'];
+$track2 = $_POST['hit2'];
+$track3 = $_POST['hit3'];
+$track4 = $_POST['hit4'];
+$track5 = $_POST['hit5'];
+$track6 = $_POST['hit6'];
+$track7 = $_POST['hit7'];
+$track8 = $_POST['hit8'];
+$track9 = $_POST['hit9'];
+$track10 = $_POST['hit10'];
+$track11 = $_POST['hit11'];
+$track12 = $_POST['hit12'];
+$track13 = $_POST['hit13'];
+$track14 = $_POST['hit14'];
+$track15 = $_POST['hit15'];
+$track16 = $_POST['hit16'];
+$track17 = $_POST['hit17'];
+$track18 = $_POST['hit18'];
+$track19 = $_POST['hit19'];
+$track20 = $_POST['hit20'];
+$track21 = $_POST['hit21'];
+$track22 = $_POST['hit22'];
+$track23 = $_POST['hit23'];
+$track24 = $_POST['hit24'];
+$track25 = $_POST['hit25'];
+$track26 = $_POST['hit26'];
+$track27 = $_POST['hit27'];
+$track28 = $_POST['hit28'];
+$track29 = $_POST['hit29'];
+$track30 = $_POST['hit30'];
+$track31 = $_POST['hit31'];
+$track32 = $_POST['hit32'];
+$track33 = $_POST['hit33'];
+$track34 = $_POST['hit34'];
+$track35 = $_POST['hit35'];
+$track36 = $_POST['hit36'];
+$track37 = $_POST['hit37'];
+$track38 = $_POST['hit38'];
+$track39 = $_POST['hit39'];
+$track40 = $_POST['hit40'];
+
+
+$sql = mysql_query("INSERT INTO answer(Track 1,Track 2,Track 3,Track 4,Track 5,Track 6,Track 7,Track 8,Track 9,Track 10,Track 11,Track 12,Track 13,Track 14,Track 15,Track 16,Track 17,Track 18,Track 19,Track 20,Track 21,Track 22,Track 23,Track 24,Track 25,Track 26,Track 27,Track 28,Track 29,Track 30,Track 31,Track 32,Track 33,Track 34,Track 35,Track 36,Track 37,Track 38,Track 39,Track 40) VALUES('$track1','$track2','$track3','$track4','$track5','$track6','$track7','$track8','$track9','$track10','$track11','$track12','$track13','$track14','$track15','$track16','$track17','$track18','$track19','$track20','$track21','$track22','$track23','$track24','$track25','$track26','$track27','$track28','$track29','$track30','$track31','$track32','$track33','$track34','$track35','$track36','$track37','$track38','$track39','$track40')");
+if(!$sql){
+    exit('データを登録できませんでした。');
+}
+
+//$result = mysql_query("SELECT * FROM post ORDER BY id DESC");
+//if (!$result) {
+//   exit('データを取得できませんでした。');
+//}
+
+
+$row = mysql_fetch_assoc($result);
+$now = strtotime($row['time']);
+$cri = $now-900;
+
+
+while($row = mysql_fetch_assoc($result)){
+    $date = strtotime($row['time']);
+}
+
+
+
+
+    ?>-->
+{% endblock %}
+

@@ -1,0 +1,125 @@
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<body id="page-top">
+
+    <!-- Intro Header -->
+    <header class="masthead">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">Counting Beats Ability</h1>
+                        <p class="intro-text">Evaluation Metrics of Counting Beats Ability
+                        <br>Start Experiment</p>
+                        <a href="#about" class="btn btn-circle js-scroll-trigger">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Introduction</h2>
+                    <p>　We are doing various research on music. As part of that, this time we will answer a few questions based on your music related abilities. In the experiment of this time, you ask "to find the 1st beat of the 1st measure while listening to the song played from the middle and take the count accurately from there."
+                    </p>
+                    <a href="#explain" class="btn btn-circle js-scroll-trigger">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download Section -->
+    <section id="explain" class="download-section content-section text-center">
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+                <h2>About Structure of Music</h2>
+                <p>  Before conducting experiments, we will use actual songs to explain the sense of music and beats.
+                </p>
+                <p>  Most of the songs that are released in general, except for classical music etc., are created to change the tune with a certain bar sense based on 8 bars. The video below will be the explanation video. Some songs are made up of simple 8 bar combinations, some are included in 8 bars ⇒ 4 bars ⇒ 8 bars, between 8 bars and 8 bars, 2 bars and 4 bars added more clearly Some songs have parts that change the tune. For the songs used in this experiment, we adopt the song group of both patterns.
+                </p>
+                <video id="video" controls>
+                    <source src="{% static 'media/Intro Movie.mp4' %}"></source>
+                </video>
+                <p>The video of explanation of structure of music</p>
+            </div>
+        </div>
+        <a href="#howto" class="btn btn-circle js-scroll-trigger">
+            <i class="fa fa-angle-double-down animated"></i>
+        </a>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="howto" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>How to answer the metrics</h2>
+                    <video id="video" controls>
+                        <source src="{% static 'media/Intro Movie.mp4' %}"></source>
+                    </video>
+                    <p>  Then, I will explain the answer method. From now on, music of various songs will be played from the middle of the song. Listen to the song that was played, please count from the part you recognized as the 1st beat of the 1st measure. Please answer like a movie.
+                    </p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                                <i class="fa fa-twitter fa-fw"></i>
+                                <span class="network-name">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                                <i class="fa fa-github fa-fw"></i>
+                                <span class="network-name">Github</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                                <i class="fa fa-google-plus fa-fw"></i>
+                                <span class="network-name">Google+</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#start" class="btn btn-circle js-scroll-trigger">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="start" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Start Experiment</h2>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="test_page.html" class="btn btn-default btn-lg">
+                                <span class="network-name">Start</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section-->
+    <div id="map"></div>
+    
+    
+    
+</body>
+
+{% endblock content %}
+
+
