@@ -298,7 +298,7 @@ function judge() {
     var output = document.getElementById("id_track1");
     var playtime = media.currentTime;
     var ans;
-    if (12.82 <= playtime && playtime <= 13.36 || 30.27 <= playtime && playtime <= 30.81){
+    if (21.54 <= playtime && playtime <= 22.09 || 39.00 <= playtime && playtime <= 39.54){
         ans=1;
         output.value = ans;
         correct++;
@@ -444,7 +444,7 @@ function judge6() {
     var output = document.getElementById("id_track6");
     var playtime = media.currentTime;
     var ans;
-    if (19.58 <= playtime && playtime <= 20.41 || 46.24 <= playtime && playtime <= 47.08){
+    if (9.58 <= playtime && playtime <= 10.41 || 36.24 <= playtime && playtime <= 37.08){
         ans=1;
         output.value = ans;
         correct++;
@@ -618,7 +618,7 @@ function judge12() {
     var output = document.getElementById("id_track12");
     var playtime = media.currentTime;
     var ans;
-    if (9.14 <= playtime && playtime <= 9.70 || 24.14 <= playtime && playtime <= 24.70){
+    if (12.89 <= playtime && playtime <= 13.35 || 27.89 <= playtime && playtime <= 28.35){
         ans=1;
         output.value = ans;
         correct++;
@@ -1024,7 +1024,7 @@ function judge26() {
     var output = document.getElementById("id_track26");
     var playtime = media.currentTime;
     var ans;
-    if (18.33 <= playtime && playtime <= 19.00 || 39.66 <= playtime && playtime <= 40.33){
+    if (7.66 <= playtime && playtime <= 8.33 || 29.00 <= playtime && playtime <= 29.66){
         ans=1;
         output.value = ans;
         correct++;
@@ -1111,7 +1111,7 @@ function judge29() {
     var output = document.getElementById("id_track29");
     var playtime = media.currentTime;
     var ans;
-    if (12.81 <= playtime && playtime <= 13.36 || 30.27 <= playtime && playtime <= 30.81){
+    if (15.00 <= playtime && playtime <= 15.54 || 32.45 <= playtime && playtime <= 33.00){
         ans=1;
         output.value = ans;
         correct++;
