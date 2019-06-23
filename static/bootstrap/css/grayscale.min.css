@@ -250,7 +250,8 @@ a:focus,a:hover{
     }
     
 }
-.btn{
+.btn a{
+    display:block;
     font-family:Cabin,
     'Helvetica Neue',
     Helvetica,Arial,
@@ -264,7 +265,8 @@ a:focus,a:hover{
     
 }
 
-.btn-default{
+.btn-default a{
+    display:block;
     color:#42dca3;
     border:1px solid #42dca3;
     background-color:transparent
