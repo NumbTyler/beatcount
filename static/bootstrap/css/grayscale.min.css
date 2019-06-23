@@ -250,12 +250,12 @@ a:focus,a:hover{
     }
     
 }
-.btn a{
-    display:block;
+.btn{
     font-family:Cabin,
     'Helvetica Neue',
     Helvetica,Arial,
     sans-serif;
+    font-size:350;
     font-weight:400;
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
