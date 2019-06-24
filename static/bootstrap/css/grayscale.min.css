@@ -255,8 +255,7 @@ a:focus,a:hover{
     'Helvetica Neue',
     Helvetica,Arial,
     sans-serif;
-    font-size:350;
-    font-weight:400;
+    font-weight:500;
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
@@ -267,7 +266,6 @@ a:focus,a:hover{
 
 .btn-default{
     color:#42dca3;
-    font-size:350;
     border:1px solid #42dca3;
     background-color:transparent
     
@@ -276,7 +274,6 @@ a:focus,a:hover{
 .btn-default:focus,
 .btn-default:hover{
     color:#000;
-    font-size:350;
     border:1px solid #42dca3;
     outline:0;
     background-color:#42dca3
