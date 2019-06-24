@@ -58,7 +58,7 @@ class Answer(models.Model):
     def __str__(self):
         return self.name
 
-class Answer2(models.Model):
+class rAnswer(models.Model):
     #user = models.ForeignKey('auth.User',on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     age = models.IntegerField()

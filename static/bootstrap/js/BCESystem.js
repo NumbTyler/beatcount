@@ -164,7 +164,7 @@ var correct2 = 0;
 function judgeR1() {
     'use strict';
     var media = document.getElementById("soundR1");
-    var output = document.getElementById("id_track01");
+    var output = document.getElementById("id_track1");
     var playtime = media.currentTime;
     var ans;
     if (7.26 <= playtime && playtime <= 7.73 || 22.26 <= playtime && playtime <= 22.73){
@@ -223,7 +223,7 @@ function PlayTrackR2(){
 function judgeR3() {
     'use strict';
     var media = document.getElementById("soundR3");
-    var output = document.getElementById("id_track03");
+    var output = document.getElementById("id_track3");
     var playtime = media.currentTime;
     var ans;
     if (8.45 <= playtime && playtime <= 9.00 || 25.90 <= playtime && playtime <= 26.45){
@@ -281,7 +281,7 @@ function PlayTrackR4(){
 function judgeR5() {
     'use strict';
     var media = document.getElementById("soundR5");
-    var output = document.getElementById("id_track05");
+    var output = document.getElementById("id_track5");
     var correctoutput = document.getElementById("id_correct");
     var playtime = media.currentTime;
     var ans;
@@ -1475,3 +1475,7 @@ function PlayTrack40(){
     track.play();
 }
 
+//function movePage(){
+//    'use strict';
+//    document.getElementById("send").action = "test_page.html";
+//}

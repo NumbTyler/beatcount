@@ -73,7 +73,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2>Track 1</h2>
-                <audio id="soundR1" action="beatcount/views.py">
+                <audio id="soundR1">
                     <source src="{% static 'media/1 Release Track BPM 128.mp3' %}" type ="audio/mp3">
                         </audio>
                 <ul class="list-inline banner-social-buttons">
@@ -209,33 +209,24 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
+                <h2>Finish</h2>
                 <p>
-                問題は以上になります．解答ありがとうございます．
-                これから5分間の休憩を取ります．その後，後半の課題に解答していただきます．
+                問題は以上になります．解答ありがとうございます．「送信」ボタンを入力し，その後,最下部の「課題2へ」ボタンを入力してください．
                 </p>
-                <h2>課題2 開始</h2>
                 <ul class="list-inline banner-social-buttons">
                     <li class="list-inline-item">
-                        <a href="test_page.html" class="btn btn-default btn-lg">
-                            <span class="network-name">Move</span>
+                        <button type="submit" class="save btn-default btn-lg" form="forms">送信</button>
+                    </li>
+                </ul>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="test_page.html" class="btn btn-default btn-default">
+                            <span class="network-name">課題2へ</span>
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="finish" class="content-section text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Finish</h2>
-                <form type="hidden" method="POST" class="post-form" >
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="save btn btn-default" href="test_page.html">課題2へ</button>
-                </form>
+                
                 
                 <!--<ul class="list-inline banner-social-buttons">
                  <li class="list-inline-item">
@@ -249,6 +240,31 @@
     </div>
 </section>
 
+<section id="send" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2> </h2>
+                <h2> </h2>
+                <h2> </h2>
+                <form id ="forms" type="hidden" method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    
+                </form>
+                
+                
+                <!--<ul class="list-inline banner-social-buttons">
+                 <li class="list-inline-item">
+                 <a href="post_edit.html" class="btn btn-default btn-lg">
+                 <span class="network-name">Done</span>
+                 </a>
+                 </li>
+                 </ul>-->
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
 
 

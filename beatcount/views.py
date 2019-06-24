@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import PostForm
-from .forms import PostForm2
+from .forms import rPostForm
 from django.shortcuts import redirect
 from .models import Answer
 from django.template import RequestContext
@@ -29,14 +29,14 @@ def practice(request):
     return render(request, 'beatcount/practice.html', {})
 def release(request):
     if request.method == "POST":
-        form = PostForm2(request.POST)
+        form = rPostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             #post.name = request.user
             post.save()
                 #return redirect(index_page, pk=post.pk)
     else:
-        form = PostForm2()
+        form = rPostForm()
     return render(request, 'beatcount/release.html', {'form':form})
 
 def index(request):

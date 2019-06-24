@@ -1175,12 +1175,22 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2>Finish</h2>
-                <form type="hidden" method="POST" class="post-form" >
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="save btn btn-default" href="index.html">Done</button>
-                </form>
+                <p>
+                送信ボタンを入力してください．送信後実験終了となります．ご協力ありがとうございます．
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                <button type="submit" class="save btn-default btn-lg" href="index.html" form="forml">送信</button>
+                    </li>
+                </ul>
                 
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="index.html" class="btn btn-default btn-default">
+                            <span class="network-name">終了</span>
+                        </a>
+                    </li>
+                </ul>
                 <!--<ul class="list-inline banner-social-buttons">
                     <li class="list-inline-item">
                         <a href="post_edit.html" class="btn btn-default btn-lg">
@@ -1188,6 +1198,30 @@
                         </a>
                     </li>
                 </ul>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cc" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2> </h2>
+
+                <form id ="forml"type="hidden" method="POST" class="post-form" >
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    
+                </form>
+                
+                <!--<ul class="list-inline banner-social-buttons">
+                 <li class="list-inline-item">
+                 <a href="post_edit.html" class="btn btn-default btn-lg">
+                 <span class="network-name">Done</span>
+                 </a>
+                 </li>
+                 </ul>-->
             </div>
         </div>
     </div>
