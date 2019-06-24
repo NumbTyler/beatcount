@@ -87,13 +87,13 @@ function judge00() {
         //ans=1;
         //output.value = ans;
         //correct++;
-        alert("Correct!!"+playtime);
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         //ans=0;
         //output.value = ans;
-        alert("Incorrect..."+playtime);
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -115,12 +115,12 @@ function judge02() {
     var ans;
     if (23.72 <= playtime && playtime <= 24.27 || 41.18 <= playtime && playtime <= 41.72){
         
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -140,11 +140,11 @@ function judge03() {
     var playtime = media.currentTime;
     var ans;
     if (11.01 <= playtime && playtime <= 11.48 || 26.01 <= playtime && playtime <= 26.48){
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -169,13 +169,13 @@ function judgeR1() {
         //ans=1;
         //output.value = ans;
         //correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         //ans=0;
         //output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -197,12 +197,12 @@ function judgeR2() {
     var ans;
     if (5.39 <= playtime && playtime <= 5.86 || 20.39 <= playtime && playtime <= 20.86){
         
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -222,11 +222,11 @@ function judgeR3() {
     var playtime = media.currentTime;
     var ans;
     if (8.45 <= playtime && playtime <= 9.00 || 25.90 <= playtime && playtime <= 26.45){
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -247,12 +247,12 @@ function judgeR4() {
     var ans;
     if (9.26 <= playtime && playtime <= 9.86 || 28.38 <= playtime && playtime <= 28.98){
         
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -272,11 +272,11 @@ function judgeR5() {
     var playtime = media.currentTime;
     var ans;
     if (7.66 <= playtime && playtime <= 8.33 || 29.00 <= playtime && playtime <= 29.66){
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -302,13 +302,13 @@ function judge() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -332,13 +332,13 @@ function judge2() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -361,13 +361,13 @@ function judge3() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -390,13 +390,13 @@ function judge4() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -419,13 +419,13 @@ function judge5() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -448,13 +448,13 @@ function judge6() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -477,13 +477,13 @@ function judge7() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -506,13 +506,13 @@ function judge8() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -535,13 +535,13 @@ function judge9() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -564,13 +564,13 @@ function judge10() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -593,13 +593,13 @@ function judge11() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -622,13 +622,13 @@ function judge12() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -651,13 +651,13 @@ function judge13() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -680,13 +680,13 @@ function judge14() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -709,13 +709,13 @@ function judge15() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -738,13 +738,13 @@ function judge16() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -767,13 +767,13 @@ function judge17() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -796,13 +796,13 @@ function judge18() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -825,13 +825,13 @@ function judge19() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -854,13 +854,13 @@ function judge20() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -883,13 +883,13 @@ function judge21() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -912,13 +912,13 @@ function judge22() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -941,13 +941,13 @@ function judge23() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -970,13 +970,13 @@ function judge24() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -999,13 +999,13 @@ function judge25() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1028,13 +1028,13 @@ function judge26() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1057,13 +1057,13 @@ function judge27() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1086,13 +1086,13 @@ function judge28() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1115,13 +1115,13 @@ function judge29() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1144,13 +1144,13 @@ function judge30() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1173,13 +1173,13 @@ function judge31() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1202,13 +1202,13 @@ function judge32() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1231,13 +1231,13 @@ function judge33() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1260,13 +1260,13 @@ function judge34() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1289,13 +1289,13 @@ function judge35() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1318,13 +1318,13 @@ function judge36() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1347,13 +1347,13 @@ function judge37() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1376,13 +1376,13 @@ function judge38() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1405,13 +1405,13 @@ function judge39() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
@@ -1435,13 +1435,13 @@ function judge40() {
         ans=1;
         output.value = ans;
         correct++;
-        alert("Correct!!");
+        alert("Correct!!" + "/" + playtime);
         media.pause();
         playtime = 0;
     } else{
         ans=0;
         output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..." + "/" + playtime);
         media.pause();
         playtime = 0;
     }
