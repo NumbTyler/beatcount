@@ -87,13 +87,13 @@ function judge00() {
         //ans=1;
         //output.value = ans;
         //correct++;
-        alert("Correct!!");
+        alert("Correct!!"+playtime);
         media.pause();
         playtime = 0;
     } else{
         //ans=0;
         //output.value = ans;
-        alert("Incorrect...");
+        alert("Incorrect..."+playtime);
         media.pause();
         playtime = 0;
     }
