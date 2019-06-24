@@ -705,7 +705,7 @@ function judge15() {
     var output = document.getElementById("id_track15");
     var playtime = media.currentTime;
     var ans;
-    if (5.39 <= playtime && playtime <= 5.86 || 20.39 <= playtime && playtime <= 20.86){
+    if (11.01 <= playtime && playtime <= 11.48 || 26.01 <= playtime && playtime <= 26.48){
         ans=1;
         output.value = ans;
         correct++;
