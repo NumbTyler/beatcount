@@ -57,3 +57,24 @@ class Answer(models.Model):
 
     def __str__(self):
         return self.name
+
+class Answer2(models.Model):
+    #user = models.ForeignKey('auth.User',on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    age = models.IntegerField()
+    sex = models.CharField(max_length=20)
+    status = models.CharField(max_length=50)
+    track1 = models.IntegerField()
+    track2 = models.IntegerField()
+    track3 = models.IntegerField()
+    track4 = models.IntegerField()
+    track5 = models.IntegerField()
+    correct = models.IntegerField()
+    created_date = models.DateTimeField(default=timezone.now)
+        
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.name

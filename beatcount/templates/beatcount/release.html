@@ -10,9 +10,59 @@
             <p>　それでは課題1の5問を行います．準備ができ次第，下のボタンを押して問題に移動してください．
                 
                 </p>
-                <a href="#track01" class="btn btn-circle js-scroll-trigger">
+                <a href="#Name" class="btn btn-circle js-scroll-trigger">
                     <i class="fa fa-angle-double-down animated"></i>
                 </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Name" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Your Info</h2>
+                <h2>Name</h2>
+                <p><input type="text" name="user" maxlength="50" id="name" value=""/></p>
+                <h2>Age</h2>
+                <p><input type="text" name="age" maxlength="20" id="age" value=""/></p>
+                
+                <h2>Sex</h2>
+                <p>
+                <select name="Sex" id="sex" value="">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                </p>
+                
+                <h2>Status</h2>
+                <p>
+                <select name="MusicExp" id="status" value="">
+                    <option value="DJ">DJ</option>
+                    <option value="Piano">Piano/Keybord</option>
+                    <option value="Guitar">Guitar</option>
+                    <option value="Bass">Bass</option>
+                    <option value="Drum">Drum</option>
+                    <option value="Dance">Dance</option>
+                    <option value="Brass">Brass</option>
+                    <option value="Strings">Strings</option>
+                    <option value="Others">Others</option>
+                    <option value="Noex">No Experience</option>
+                </select>
+                </p>
+                
+                
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track01" class="btn btn-default btn-lg">
+                            <span id="hit" onClick ="InfoInput();" class="network-name">Start</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
             </div>
         </div>
     </div>
@@ -171,6 +221,29 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="finish" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Finish</h2>
+                <form type="hidden" method="POST" class="post-form" >
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default" href="test_page.html">課題2へ</button>
+                </form>
+                
+                <!--<ul class="list-inline banner-social-buttons">
+                 <li class="list-inline-item">
+                 <a href="post_edit.html" class="btn btn-default btn-lg">
+                 <span class="network-name">Done</span>
+                 </a>
+                 </li>
+                 </ul>-->
             </div>
         </div>
     </div>
