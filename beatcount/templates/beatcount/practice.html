@@ -7,10 +7,10 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2>練習問題</h2>
-            <p>　それでは，練習問題に取り組んでいただきます．今回の実験で用いる全問題では，約1分間の楽曲が曲の途中から再生されます．再生された曲を聴いて，あなたが，8小節の初めのポイント＝1小節目の1拍目だと認識した部分で解答していただきます．課題ではPlayボタンを入力して楽曲を再生し，正解だと思ったタイミングで，HITボタンを入力して解答を行います．練習問題ではHITボタンの入力と同時に正解と不正解のアラートが表示されますので，通知を確認後，閉じてもらうと次の問題に移動します．練習，課題楽曲中では，1小節目の1拍目が2度登場しますがHITボタンを入力するチャンスは1度のみです．1度目，2度目どちらで解答していただいても構いません．解答していなくても曲が終わってしまった場合もHITボタンを押して次の問題に移動してください．
+            <p>　それでは，練習問題に取り組んでいただきます．今回の実験で用いる全問題では，約1分間の楽曲が曲の途中から再生されます．再生された曲を聴いて，あなたが，8小節の初めのポイント＝1小節目の1拍目だと認識した部分で解答していただきます．課題ではPlayボタンを入力して楽曲を再生し，正解だと思ったタイミングで，HITボタンを入力して解答を行います．練習問題ではHITボタンの入力と同時に正解と不正解のアラートが表示されますので，通知を確認後，閉じてもらうと次の問題に移動します．練習，課題楽曲中では，1小節目の1拍目が2度登場しますがHITボタンを入力するチャンスは1度のみです．1度目，2度目どちらで解答していただいても構いませんが，1度目を聴いてそこから8小節数えて，2度目で解答する事を推奨します．解答せずに曲が終わってしまった場合もHITボタンを押して次の問題に移動してください．なお，各トラック名の横に表示されている"BPM"は曲の速さを表します．
                 </p>
                 <p>
-                注意＊ ボタン入力の際は，”PLAY”,"HIT"と書かれた文字の部分をクリックしてください．
+                注意＊ ボタン入力の際は，”PLAY”,"HIT"と書かれた文字の部分をクリックしてください．文字以外の部分を押すと曲が止まりません．
                 </p>
                 <a href="#track01" class="btn btn-circle js-scroll-trigger">
                     <i class="fa fa-angle-double-down animated"></i>
@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2>Track 1</h2>
+                <h2>Track 1 : BPM 128</h2>
                 <audio id="sound01" action="beatcount/views.py">
                     <source src="{% static 'media/Training 1 BPM 128.mp3' %}" type ="audio/mp3">
                         </audio>
@@ -50,7 +50,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2>Track 2</h2>
+                <h2>Track 2 : BPM 110</h2>
                 <audio id="sound02">
                     <source src="{% static 'media/Training 2 BPM 110.mp3' %}" type ="audio/mp3">
                         </audio>
@@ -76,7 +76,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2>Track 3</h2>
+                <h2>Track 3 : BPM 128</h2>
                 <audio id="sound03">
                     <source src="{% static 'media/Training 3 BPM 128.mp3' %}" type ="audio/mp3">
                         </audio>
