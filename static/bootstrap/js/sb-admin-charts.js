@@ -372,8 +372,8 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 30,
-          maxTicksLimit: 40
+          max: 50,
+          maxTicksLimit: 50
         },
         gridLines: {
           display: true
@@ -403,6 +403,8 @@ var strings_count = document.getElementById("strings_count");
 strings_count = strings_count.value;
 var dance_count = document.getElementById("dance_count");
 dance_count = dance_count.value;
+var sing_count = document.getElementById("sing_count");
+sing_count = sing_count.value;
 var others_count = document.getElementById("others_count");
 others_count = others_count.value;
 var noex_count = document.getElementById("noex_count");
@@ -410,10 +412,10 @@ noex_count = noex_count.value;
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["DJ", "Piano/Keybord", "Guitar", "Bass", "Drum", "Brass", "Strings", "Dance", "Others", "No Music Experience"],
+    labels: ["DJ", "Piano/Keybord", "Guitar", "Bass", "Drum", "Brass", "Strings", "Dance", "Singing", "Others", "No Musical Experience"],
     datasets: [{
-      data: [dj_count, piano_count, guitar_count, bass_count, drum_count, brass_count, strings_count, dance_count, others_count, noex_count],
-               backgroundColor: ['#ffcc66', '#00ff00', '#6699ff', '#00ffff', '#cc99ff', '#ffff00', '#640000', '#006400', '#bbbbbb', '#000033'],
+      data: [dj_count, piano_count, guitar_count, bass_count, drum_count, brass_count, strings_count, dance_count, sing_count, others_count, noex_count],
+               backgroundColor: ['#ffcc66', '#00ff00', '#6699ff', '#00ffff', '#cc99ff', '#ffff00', '#640000', '#006400', '#f56942', '#bbbbbb', '#000033'],
     }],
   },
 });

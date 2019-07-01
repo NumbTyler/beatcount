@@ -94,8 +94,9 @@ def index(request):
         'brass_count': pAnswer.objects.filter(status="Brass").count(),
         'strings_count': pAnswer.objects.filter(status="Strings").count(),
         'dance_count': pAnswer.objects.filter(status="Dance").count(),
+        'sing_count': pAnswer.objects.filter(status="Singing").count(),
         'others_count': pAnswer.objects.filter(status="Others").count(),
-        'noex_count': pAnswer.objects.filter(status="Noex").count(),
+        'noex_count': pAnswer.objects.filter(status="No Experience").count(),
 
             'latest' : pAnswer.objects.order_by('created_date').last(),
     }
