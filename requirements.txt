@@ -6,12 +6,6 @@ modulegraph==0.17
 numpy==1.16.3
 pbr==5.3.0
 py2app==0.19
-pyparsing==2.4.0
-python-dateutil==2.8.0
-pytz==2019.1
-virtualenv==16.6.1
-virtualenv-clone==0.5.3
-virtualenvwrapper==4.8.4
 matplotlib==3.1.0
 stevedore==1.30.1
 scipy==1.2.2
