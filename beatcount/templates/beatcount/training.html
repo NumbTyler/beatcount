@@ -1,0 +1,117 @@
+
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<body id="page-top">
+                                            
+    <!-- Intro Header -->
+    <header class="masthead">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">Training </h1>
+<!--                            <p class="intro-text">ビートカウント能力測定指標-->
+<!--                            <br><br>実験開始</p>-->
+                        <a href="#about" class="btn btn-circle js-scroll-trigger">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>はじめに</h2>
+                    <p>　私達は，音楽に関する様々な研究を行っています．今回はその一環として，あなたの音楽に関するある能力を向上させるための訓練を行なってもらいます．
+                    今回の実験では「途中から再生された曲を聴きながら曲調の変化するポイントを見つけて解答する．」という作業をしてもらいます．
+                    実験を行う前に，音楽の小節や拍の感覚を分かっていただくために動画を用いて説明します．
+                    
+                    </p>
+                        <a href="#explain" class="btn btn-circle js-scroll-trigger">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download Section -->
+    <section id="explain" class="download-section content-section text-center">
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+                <h2>楽曲の構造，小節について</h2>
+                <p>  クラシック音楽等を除いた，一般にリリースされている多くの楽曲が，4拍子の8小節を１つの区切りとして，曲調が変化するように制作されています．本実験では全ての楽曲において8小節感覚で曲調が変化する楽曲を使用しています．みなさんにはその8小節の開始位置を聴き取っていただきます．動画を見て，楽曲が8小節の塊で構成されている事を確認してください．動画内のBeatCountは拍数，Barsは小節数を表しています．
+                
+                </p>
+                <video id="video" controls>
+                    <source src="{% static 'media/Intro Movie.mp4' %}"></source>
+                </video>
+                <p>小節，拍の説明動画<br>注：本番では波形やカウントは表示されません</p>
+            </div>
+        </div>
+        <a href="#trainingtop" class="btn btn-circle js-scroll-trigger">
+            <i class="fa fa-angle-double-down animated"></i>
+        </a>
+    </section>
+    
+    <section id="trainingtop" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Counting Beats Test</h2>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="practice.html" class="btn btn-default btn-lg">
+                                <span class="network-name">Example</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="test1.html" class="btn btn-default btn-lg">
+                                <span class="network-name">Test before Training</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="first_step.html" class="btn btn-default btn-lg">
+                                <span class="network-name">1st Step</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="sec_step.html" class="btn btn-default btn-lg">
+                                <span class="network-name">2nd Step</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="final_step.html" class="btn btn-default btn-lg">
+                                <span class="network-name">Final Step</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="test2.html" class="btn btn-default btn-lg">
+                                <span class="network-name">Test after Training</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+{% endblock content %}
+

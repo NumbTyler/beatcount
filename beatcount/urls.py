@@ -18,5 +18,11 @@ urlpatterns = [
                path('register.html', views.register, name='register'),
                path('tables.html', views.tables, name='tables'),
                path('release.html', views.release, name='release'),
+               path('training.html', views.training, name='training'),
+               path('first_step.html', views.first_step, name='first_step'),
+               path('sec_step.html', views.sec_step, name='sec_step'),
+               path('final_step.html', views.final_step, name='final_step'),
+               path('test1.html', views.test1, name='test1'),
+               path('test2.html', views.test2, name='test2'),
 ]
 

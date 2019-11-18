@@ -1,0 +1,264 @@
+
+
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<section id="about" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>課題1：5問</h2>
+            <p>　第三ステップでは，動画の視聴は行わず，確認問題5問だけを実施します．こちらで5問中3問に正解すると，訓練を終了します．
+                </p>
+                <a href="#Name" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Name" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Your Info</h2>
+                <h2>Name</h2>
+                <p><input type="text" name="user" maxlength="50" id="name" value=""/></p>
+<!--                <h2>Age</h2>-->
+<!--                <p><input type="text" name="age" maxlength="20" id="age" value=""/></p>-->
+<!--                -->
+<!--                <h2>Sex</h2>-->
+<!--                <p>-->
+<!--                <select name="Sex" id="sex" value="">-->
+<!--                    <option value="Male">Male</option>-->
+<!--                    <option value="Female">Female</option>-->
+<!--                    <option value="Other">Other</option>-->
+<!--                </select>-->
+<!--                </p>-->
+<!--                -->
+<!--                <h2>Experience</h2>-->
+<!--                <p>-->
+<!--                <select name="MusicExp" id="status" value="">-->
+<!--                    <option value="DJ">DJ</option>-->
+<!--                    <option value="Piano">Piano/Keybord</option>-->
+<!--                    <option value="Guitar">Guitar</option>-->
+<!--                    <option value="Bass">Bass</option>-->
+<!--                    <option value="Drum">Drum</option>-->
+<!--                    <option value="Dance">Dance</option>-->
+<!--                    <option value="Brass">Brass</option>-->
+<!--                    <option value="Strings">Strings</option>-->
+<!--                    <option value="Singing">Singing</option>-->
+<!--                    <option value="Others">Others</option>-->
+<!--                    <option value="No Experience">No Experience</option>-->
+<!--                </select>-->
+<!--                </p>-->
+                
+                
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#track01" class="btn btn-default btn-lg">
+                            <span id="hit" onClick ="InfoInput2();" class="network-name">Start</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track01" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 1 : BPM 128</h2>
+                <audio id="soundT3_1">
+                    <source src="{% static 'media/3rdTraining1.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="playT3_1" onClick ="PlayTrackT3_1();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track02" class="btn btn-default btn-lg">
+                            <span id="hitT3_1" onClick ="judgeT3_1();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track02" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 2 : BPM 128</h2>
+                <audio id="soundT3_2">
+                    <source src="{% static 'media/3rdTraining2.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="playT3_2" onClick ="PlayTrackT3_2();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track03" class="btn btn-default btn-lg">
+                            <span id="hitT3_2" onClick ="judgeT3_2();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track03" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 3 : BPM 110</h2>
+                <audio id="soundT3_3">
+                    <source src="{% static 'media/3rdTraining3.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playT3_3" onClick ="PlayTrackT3_3();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track04" class="btn btn-default btn-lg">
+                            <span id="hitT3_3" onClick ="judgeT3_3();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track04" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 4 : BPM 100</h2>
+                
+                <audio id="soundT3_4">
+                    <source src="{% static 'media/3rdTraining4.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playT3_4" onClick ="PlayTrackT3_4();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track05" class="btn btn-default btn-lg">
+                            <span id="hitT3_4" onClick ="judgeT3_4();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track05" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 5 : BPM 90</h2>
+                
+                <audio id="soundT3_5" >
+                    <source src="{% static 'media/3rdTraining5.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playT3_5" onClick ="PlayTrackT3_5();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#finish" class="btn btn-default btn-lg">
+                            <span id="hitT3_5" onClick ="judgeT3_5();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="finish" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Finish</h2>
+                <p>         問題は以上になります．「送信」ボタンを入力して解答を送信してください．
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <button onClick="checkSend();" type="submit" class="save btn-default btn" form="forms">送信</button>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="training.html" class="btn btn-default btn-default">
+                            <span class="network-name">トレーニングトップへ</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                
+                
+                <!--<ul class="list-inline banner-social-buttons">
+                 <li class="list-inline-item">
+                 <a href="post_edit.html" class="btn btn-default btn-lg">
+                 <span class="network-name">Done</span>
+                 </a>
+                 </li>
+                 </ul>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="send" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2> </h2>
+                <h2> </h2>
+                <h2> </h2>
+                <form id ="forms" type="hidden" method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    
+                </form>
+                
+                
+                <!--<ul class="list-inline banner-social-buttons">
+                 <li class="list-inline-item">
+                 <a href="post_edit.html" class="btn btn-default btn-lg">
+                 <span class="network-name">Done</span>
+                 </a>
+                 </li>
+                 </ul>-->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

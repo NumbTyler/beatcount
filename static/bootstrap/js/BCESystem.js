@@ -48,6 +48,7 @@ function Time(){
 }
 
 
+
 function InfoInput() {
     'use strict';
     var name = document.getElementById("name");
@@ -74,6 +75,27 @@ function InfoInput() {
     } else {
         alert("Fill in the blank.(Name)");
     }
+}
+
+function InfoInput2() {
+    'use strict';
+    var name = document.getElementById("name");
+    var output = document.getElementById("id_name");
+    var ninput = name.value;
+    
+    if(name != null){
+        output.value = ninput;
+
+    } else {
+        alert("Fill in the blank.(Name)");
+    }
+}
+
+function checkSend() {
+    'use strict';
+    alert('送信しました．');
+    location.href = 'training.html';
+    
 }
 
 //練習問題用判定関数．アラートあり．
@@ -309,8 +331,463 @@ function PlayTrackR5(){
     track.play();
 }
 
+//Training1判定関数．
+var correct3 = 0;
+
+function judgeT1_1() {
+    'use strict';
+    var media = document.getElementById("soundT1_1");
+    var output = document.getElementById("id_track1");
+    var playtime = media.currentTime;
+    var ans;
+    if (7.3 <= playtime && playtime <= 7.8 || 22.3 <= playtime && playtime <= 22.8){
+        ans=1;
+        output.value = ans;
+        correct3++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+    
+}
+
+function PlayTrackT1_1(){
+    'use strict';
+    var play = document.getElementById("playT1_1");
+    var track = document.getElementById("soundT1_1");
+    track.play();
+}
+
+function judgeT1_2() {
+    'use strict';
+    var media = document.getElementById("soundT1_2");
+    var output = document.getElementById("id_track2");
+    var playtime = media.currentTime;
+    var ans;
+    if (9.1 <= playtime && playtime <= 9.65 || 24.1 <= playtime && playtime <= 24.65){
+        ans=1;
+        output.value = ans;
+        correct3++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT1_2(){
+    'use strict';
+    var play = document.getElementById("playT1_2");
+    var track = document.getElementById("soundT1_2");
+    track.play();
+}
+
+function judgeT1_3() {
+    'use strict';
+    var media = document.getElementById("soundT1_3");
+    var output = document.getElementById("id_track3");
+    var playtime = media.currentTime;
+    var ans;
+    if (12.8 <= playtime && playtime <= 13.4 || 30.2 <= playtime && playtime <= 30.8){
+        ans=1;
+        output.value = ans;
+        correct3++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT1_3(){
+    'use strict';
+    var play = document.getElementById("playT1_3");
+    var track = document.getElementById("soundT1_3");
+    track.play();
+}
+
+function judgeT1_4() {
+    'use strict';
+    var media = document.getElementById("soundT1_4");
+    var output = document.getElementById("id_track4");
+    var playtime = media.currentTime;
+    var ans;
+    if (11.3 <= playtime && playtime <= 12.0 || 29.9 <= playtime && playtime <= 30.5){
+        ans=1;
+        output.value = ans;
+        correct3++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT1_4(){
+    'use strict';
+    var play = document.getElementById("playT1_4");
+    var track = document.getElementById("soundT1_4");
+    track.play();
+}
+
+function judgeT1_5() {
+    'use strict';
+    var media = document.getElementById("soundT1_5");
+    var output = document.getElementById("id_track5");
+    var correctoutput = document.getElementById("id_correct");
+    var playtime = media.currentTime;
+    var ans;
+    if (7.6 <= playtime && playtime <= 8.33 || 29.00 <= playtime && playtime <= 29.66){
+        ans=1;
+        output.value = ans;
+        correct3++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+    correctoutput.value = correct3;
+}
+
+function PlayTrackT1_5(){
+    'use strict';
+    var play = document.getElementById("playT1_5");
+    var track = document.getElementById("soundT1_5");
+    track.play();
+}
+
+//Training2判定関数．
+var correct4 = 0;
+
+function judgeT2_1() {
+    'use strict';
+    var media = document.getElementById("soundT2_1");
+    var output = document.getElementById("id_track1");
+    var playtime = media.currentTime;
+    var ans;
+    if (14.7 <= playtime && playtime <= 15.24 || 29.7 <= playtime && playtime <= 30.24){
+        ans=1;
+        output.value = ans;
+        correct4++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+    
+}
+
+function PlayTrackT2_1(){
+    'use strict';
+    var play = document.getElementById("playT2_1");
+    var track = document.getElementById("soundT2_1");
+    track.play();
+}
+
+function judgeT2_2() {
+    'use strict';
+    var media = document.getElementById("soundT2_2");
+    var output = document.getElementById("id_track2");
+    var playtime = media.currentTime;
+    var ans;
+    if (14.7 <= playtime && playtime <= 15.24 || 29.7 <= playtime && playtime <= 30.24){
+        ans=1;
+        output.value = ans;
+        correct4++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT2_2(){
+    'use strict';
+    var play = document.getElementById("playT2_2");
+    var track = document.getElementById("soundT2_2");
+    track.play();
+}
+
+function judgeT2_3() {
+    'use strict';
+    var media = document.getElementById("soundT2_3");
+    var output = document.getElementById("id_track3");
+    var playtime = media.currentTime;
+    var ans;
+    if (17.1 <= playtime && playtime <= 17.7 || 34.6 <= playtime && playtime <= 35.2){
+        ans=1;
+        output.value = ans;
+        correct4++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT2_3(){
+    'use strict';
+    var play = document.getElementById("playT2_3");
+    var track = document.getElementById("soundT2_3");
+    track.play();
+}
+
+function judgeT2_4() {
+    'use strict';
+    var media = document.getElementById("soundT2_4");
+    var output = document.getElementById("id_track4");
+    var playtime = media.currentTime;
+    var ans;
+    if (18.9 <= playtime && playtime <= 19.5 || 38.1 <= playtime && playtime <= 38.7){
+        ans=1;
+        output.value = ans;
+        correct4++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT2_4(){
+    'use strict';
+    var play = document.getElementById("playT2_4");
+    var track = document.getElementById("soundT2_4");
+    track.play();
+}
+
+function judgeT2_5() {
+    'use strict';
+    var media = document.getElementById("soundT2_5");
+    var output = document.getElementById("id_track5");
+    var correctoutput = document.getElementById("id_correct");
+    var playtime = media.currentTime;
+    var ans;
+    if (21.0 <= playtime && playtime <= 21.7 || 42.3 <= playtime && playtime <= 43.0){
+        ans=1;
+        output.value = ans;
+        correct4++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+    correctoutput.value = correct4;
+}
+
+function PlayTrackT2_5(){
+    'use strict';
+    var play = document.getElementById("playT2_5");
+    var track = document.getElementById("soundT2_5");
+    track.play();
+}
+
+//Training3判定関数．
+var correct5 = 0;
+
+function judgeT3_1() {
+    'use strict';
+    var media = document.getElementById("soundT3_1");
+    var output = document.getElementById("id_track1");
+    var playtime = media.currentTime;
+    var ans;
+    if (11.0 <= playtime && playtime <= 11.5 || 26.0 <= playtime && playtime <= 26.5){
+        ans=1;
+        output.value = ans;
+        correct5++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+    
+}
+
+function PlayTrackT3_1(){
+    'use strict';
+    var play = document.getElementById("playT3_1");
+    var track = document.getElementById("soundT3_1");
+    track.play();
+}
+
+function judgeT3_2() {
+    'use strict';
+    var media = document.getElementById("soundT3_2");
+    var output = document.getElementById("id_track2");
+    var playtime = media.currentTime;
+    var ans;
+    if (11.0 <= playtime && playtime <= 11.5 || 26.0 <= playtime && playtime <= 26.5){
+        ans=1;
+        output.value = ans;
+        correct5++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT3_2(){
+    'use strict';
+    var play = document.getElementById("playT3_2");
+    var track = document.getElementById("soundT3_2");
+    track.play();
+}
+
+function judgeT3_3() {
+    'use strict';
+    var media = document.getElementById("soundT3_3");
+    var output = document.getElementById("id_track3");
+    var playtime = media.currentTime;
+    var ans;
+    if (8.45 <= playtime && playtime <= 9.00 || 25.90 <= playtime && playtime <= 26.45){
+        ans=1;
+        output.value = ans;
+        correct5++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT3_3(){
+    'use strict';
+    var play = document.getElementById("playT3_3");
+    var track = document.getElementById("soundT3_3");
+    track.play();
+}
+
+function judgeT3_4() {
+    'use strict';
+    var media = document.getElementById("soundT3_4");
+    var output = document.getElementById("id_track4");
+    var playtime = media.currentTime;
+    var ans;
+    if (12.8 <= playtime && playtime <= 13.4 || 30.2 <= playtime && playtime <= 30.8){
+        ans=1;
+        output.value = ans;
+        correct5++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+}
+
+function PlayTrackT3_4(){
+    'use strict';
+    var play = document.getElementById("playT3_4");
+    var track = document.getElementById("soundT3_4");
+    track.play();
+}
+
+function judgeT3_5() {
+    'use strict';
+    var media = document.getElementById("soundT3_5");
+    var output = document.getElementById("id_track5");
+    var correctoutput = document.getElementById("id_correct");
+    var playtime = media.currentTime;
+    var ans;
+    if (18.3 <= playtime && playtime <= 19.0 || 39.6 <= playtime && playtime <= 40.3){
+        ans=1;
+        output.value = ans;
+        correct5++;
+        //alert("Correct!!");
+        media.pause();
+        playtime = 0;
+    } else{
+        ans=0;
+        output.value = ans;
+        //alert("Incorrect...");
+        media.pause();
+        playtime = 0;
+    }
+    correctoutput.value = correct5;
+}
+
+function PlayTrackT3_5(){
+    'use strict';
+    var play = document.getElementById("playT3_5");
+    var track = document.getElementById("soundT3_5");
+    track.play();
+}
+
+
 //本番問題用判定関数．アラートなし．
 var correct = 0;
+
 
 function judge() {
     'use strict';
@@ -332,7 +809,7 @@ function judge() {
         media.pause();
         playtime = 0;
     }
-    
+
 }
 
 function PlayTrack1(){
@@ -362,6 +839,7 @@ function judge2() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack2(){
@@ -391,6 +869,7 @@ function judge3() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack3(){
@@ -420,6 +899,7 @@ function judge4() {
         media.pause();
         playtime = 0;
     }
+ 
 }
 
 function PlayTrack4(){
@@ -449,6 +929,7 @@ function judge5() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack5(){
@@ -478,6 +959,7 @@ function judge6() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack6(){
@@ -507,6 +989,7 @@ function judge7() {
         media.pause();
         playtime = 0;
     }
+   
 }
 
 function PlayTrack7(){
@@ -536,6 +1019,7 @@ function judge8() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack8(){
@@ -565,6 +1049,7 @@ function judge9() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack9(){
@@ -579,6 +1064,7 @@ function judge10() {
     var media = document.getElementById("sound10");
     var output = document.getElementById("id_track10");
     var playtime = media.currentTime;
+    var correctoutput = document.getElementById("id_correct");
     var ans;
     if (11.01 <= playtime && playtime <= 11.48 || 26.01 <= playtime && playtime <= 26.48){
         ans=1;
@@ -594,6 +1080,7 @@ function judge10() {
         media.pause();
         playtime = 0;
     }
+    correctoutput.value = correct;
 }
 
 function PlayTrack10(){
@@ -623,6 +1110,7 @@ function judge11() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack11(){
@@ -652,6 +1140,7 @@ function judge12() {
         media.pause();
         playtime = 0;
     }
+ 
 }
 
 function PlayTrack12(){
@@ -681,6 +1170,7 @@ function judge13() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack13(){
@@ -710,6 +1200,7 @@ function judge14() {
         media.pause();
         playtime = 0;
     }
+   
 }
 
 function PlayTrack14(){
@@ -739,6 +1230,7 @@ function judge15() {
         media.pause();
         playtime = 0;
     }
+ 
 }
 
 function PlayTrack15(){
@@ -768,6 +1260,7 @@ function judge16() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack16(){
@@ -797,6 +1290,7 @@ function judge17() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack17(){
@@ -811,6 +1305,7 @@ function judge18() {
     var media = document.getElementById("sound18");
     var output = document.getElementById("id_track18");
     var playtime = media.currentTime;
+    var correctoutput = document.getElementById("id_correct");
     var ans;
     if (9.49 <= playtime && playtime <= 10.10 || 29.08 <= playtime && playtime <= 29.69){
         ans=1;
@@ -826,6 +1321,7 @@ function judge18() {
         media.pause();
         playtime = 0;
     }
+    correctoutput.value = correct;
 }
 
 function PlayTrack18(){
@@ -855,6 +1351,7 @@ function judge19() {
         media.pause();
         playtime = 0;
     }
+  
 }
 
 function PlayTrack19(){
@@ -884,6 +1381,7 @@ function judge20() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack20(){
@@ -913,6 +1411,7 @@ function judge21() {
         media.pause();
         playtime = 0;
     }
+  
 }
 
 function PlayTrack21(){
@@ -942,6 +1441,7 @@ function judge22() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack22(){
@@ -971,6 +1471,7 @@ function judge23() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack23(){
@@ -1000,6 +1501,7 @@ function judge24() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack24(){
@@ -1029,6 +1531,7 @@ function judge25() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack25(){
@@ -1058,6 +1561,7 @@ function judge26() {
         media.pause();
         playtime = 0;
     }
+ 
 }
 
 function PlayTrack26(){
@@ -1087,6 +1591,7 @@ function judge27() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack27(){
@@ -1116,6 +1621,7 @@ function judge28() {
         media.pause();
         playtime = 0;
     }
+   
 }
 
 function PlayTrack28(){
@@ -1145,6 +1651,7 @@ function judge29() {
         media.pause();
         playtime = 0;
     }
+   
 }
 
 function PlayTrack29(){
@@ -1174,6 +1681,7 @@ function judge30() {
         media.pause();
         playtime = 0;
     }
+  
 }
 
 function PlayTrack30(){
@@ -1203,6 +1711,7 @@ function judge31() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack31(){
@@ -1232,6 +1741,7 @@ function judge32() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack32(){
@@ -1261,6 +1771,7 @@ function judge33() {
         media.pause();
         playtime = 0;
     }
+ 
 }
 
 function PlayTrack33(){
@@ -1290,6 +1801,7 @@ function judge34() {
         media.pause();
         playtime = 0;
     }
+   
 }
 
 function PlayTrack34(){
@@ -1319,6 +1831,7 @@ function judge35() {
         media.pause();
         playtime = 0;
     }
+
 }
 
 function PlayTrack35(){
@@ -1348,6 +1861,7 @@ function judge36() {
         media.pause();
         playtime = 0;
     }
+    
 }
 
 function PlayTrack36(){
@@ -1377,6 +1891,7 @@ function judge37() {
         media.pause();
         playtime = 0;
     }
+    
 }
 
 function PlayTrack37(){
@@ -1435,6 +1950,7 @@ function judge39() {
         media.pause();
         playtime = 0;
     }
+  
 }
 
 function PlayTrack39(){

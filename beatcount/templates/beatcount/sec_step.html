@@ -1,0 +1,363 @@
+
+
+{% extends 'beatcount/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<section id="about" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Training Step 2</h2>
+                <p>　第二ステップは動画内でカウント数が表示されません．それ以外は第一ステップと同様に，5つの動画を視聴後，確認問題に取り組んでもらいます．こちらでは5問中3問に正解すると，次のステップへ進んでいただきます．
+                    </p>
+                <a href="#Name" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Name" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Your Info</h2>
+                <h2>Name</h2>
+                <p><input type="text" name="user" maxlength="50" id="name" value=""/></p>
+<!--                <h2>Age</h2>-->
+<!--                <p><input type="text" name="age" maxlength="20" id="age" value=""/></p>-->
+<!--                -->
+<!--                <h2>Sex</h2>-->
+<!--                <p>-->
+<!--                <select name="Sex" id="sex" value="">-->
+<!--                    <option value="Male">Male</option>-->
+<!--                    <option value="Female">Female</option>-->
+<!--                    <option value="Other">Other</option>-->
+<!--                </select>-->
+<!--                </p>-->
+<!--                -->
+<!--                <h2>Experience</h2>-->
+<!--                <p>-->
+<!--                <select name="MusicExp" id="status" value="">-->
+<!--                    <option value="DJ">DJ</option>-->
+<!--                    <option value="Piano">Piano/Keybord</option>-->
+<!--                    <option value="Guitar">Guitar</option>-->
+<!--                    <option value="Bass">Bass</option>-->
+<!--                    <option value="Drum">Drum</option>-->
+<!--                    <option value="Dance">Dance</option>-->
+<!--                    <option value="Brass">Brass</option>-->
+<!--                    <option value="Strings">Strings</option>-->
+<!--                    <option value="Singing">Singing</option>-->
+<!--                    <option value="Others">Others</option>-->
+<!--                    <option value="No Experience">No Experience</option>-->
+<!--                </select>-->
+<!--                </p>-->
+                
+                
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#mClip01" class="btn btn-default btn-lg">
+                            <span id="hit" onClick ="InfoInput2();" class="network-name">Start</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mClip01" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 1 : BPM 128</h2>
+                <video id="video" controls>
+                    <source src="{% static 'media/exTrack_6.mov' %}"></source>
+                </video>
+                <br></br>
+                <a href="#mClip02" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mClip02" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 2 : BPM 128</h2>
+                <video id="video" controls>
+                    <source src="{% static 'media/exTrack_7.mov' %}"></source>
+                </video>
+                <br></br>
+                <a href="#mClip03" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mClip03" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 3 : BPM 110</h2>
+                <video id="video" controls>
+                    <source src="{% static 'media/exTrack_8.mov' %}"></source>
+                </video>
+                <br></br>
+                <a href="#mClip04" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mClip04" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 4 : BPM 100</h2>
+                <video id="video" controls>
+                    <source src="{% static 'media/exTrack_9.mov' %}"></source>
+                </video>
+                <br></br>
+                <a href="#mClip05" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mClip05" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 5 : BPM 90</h2>
+                <video id="video" controls>
+                    <source src="{% static 'media/exTrack_10.mov' %}"></source>
+                </video>
+                <br></br>
+                <a href="#blank" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blank" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>確認問題</h2>
+                <p>
+                続いて確認問題5問に移行します．学習した後に解答お願いします．
+                問題に使用した楽曲は動画内で使用したものと同様です．
+                </p>
+                <a href="#track01" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track01" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 1 : BPM 128</h2>
+                <audio id="soundT2_1">
+                    <source src="{% static 'media/2ndTraining1.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="playT2_1" onClick ="PlayTrackT2_1();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track02" class="btn btn-default btn-lg">
+                            <span id="hitT2_1" onClick ="judgeT2_1();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track02" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 2 : BPM 128</h2>
+                <audio id="soundT2_2">
+                    <source src="{% static 'media/2ndTraining2.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a class="btn btn-default btn-lg">
+                            <span id="playT2_2" onClick ="PlayTrackT2_2();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track03" class="btn btn-default btn-lg">
+                            <span id="hitT2_2" onClick ="judgeT2_2();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track03" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 3 : BPM 110</h2>
+                <audio id="soundT2_3">
+                    <source src="{% static 'media/2ndTraining3.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playT2_3" onClick ="PlayTrackT2_3();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track04" class="btn btn-default btn-lg">
+                            <span id="hitT2_3" onClick ="judgeT2_3();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track04" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 4 : BPM 100</h2>
+                <audio id="soundT2_4">
+                    <source src="{% static 'media/2ndTraining4.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playT2_4" onClick ="PlayTrackT2_4();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#track05" class="btn btn-default btn-lg">
+                            <span id="hitT2_4" onClick ="judgeT2_4();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="track05" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 5 : BPM 90</h2>
+                <audio id="soundT2_5" >
+                    <source src="{% static 'media/2ndTraining5.mp3' %}" type ="audio/mp3">
+                        </audio>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a   class="btn btn-default btn-lg">
+                            <span id="playT2_5" onClick ="PlayTrackT2_5();" class="network-name">Play</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#finish" class="btn btn-default btn-lg">
+                            <span id="hitT2_5" onClick ="judgeT2_5();" class="network-name">Hit</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="finish" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Finish</h2>
+                <p>
+                問題は以上になります．「送信」ボタンを入力して解答を送信してください．
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <button onClick="checkSend();" type="submit" class="save btn-default btn" form="forms">送信</button>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="training.html" class="btn btn-default btn-default">
+                            <span class="network-name">トレーニングトップへ</span>
+                        </a>
+                    </li>
+                </ul>
+                <!--<ul class="list-inline banner-social-buttons">
+                 <li class="list-inline-item">
+                 <a href="post_edit.html" class="btn btn-default btn-lg">
+                 <span class="network-name">Done</span>
+                 </a>
+                 </li>
+                 </ul>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="send" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2> </h2>
+                <h2> </h2>
+                <h2> </h2>
+                <form id ="forms" type="hidden" method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    
+                </form>
+                
+                
+                <!--<ul class="list-inline banner-social-buttons">
+                 <li class="list-inline-item">
+                 <a href="post_edit.html" class="btn btn-default btn-lg">
+                 <span class="network-name">Done</span>
+                 </a>
+                 </li>
+                 </ul>-->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

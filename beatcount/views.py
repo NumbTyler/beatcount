@@ -1,9 +1,19 @@
 from django.shortcuts import render
 from .forms import PostForm
 from .forms import rPostForm
+from .forms import Test1Form
+from .forms import Test2Form
+from .forms import T1Form
+from .forms import T2Form
+from .forms import T3Form
 from django.shortcuts import redirect
 from .models import Answer
 from .models import pAnswer
+from .models import Test1
+from .models import Test2
+from .models import T1
+from .models import T2
+from .models import T3
 from django.template import RequestContext
 from django.db.models import Sum
 from django.db.models import Count
@@ -11,6 +21,44 @@ from django.db.models import Count
 
 def lang_select(request):
     return render(request, 'beatcount/lang_select.html', {})
+def training(request):
+    return render(request, 'beatcount/training.html', {})
+def first_step(request):
+    if request.method == "POST":
+        form = T1Form(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            #post.name = request.user
+            post.save()
+                #return redirect(index_page, pk=post.pk)
+    else:
+        form = T1Form()
+    return render(request, 'beatcount/first_step.html', {'form':form})
+    
+def sec_step(request):
+    if request.method == "POST":
+        form = T2Form(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            #post.name = request.user
+            post.save()
+                #return redirect(index_page, pk=post.pk)
+    else:
+        form = T2Form()
+    return render(request, 'beatcount/sec_step.html', {'form':form})
+    
+def final_step(request):
+    if request.method == "POST":
+        form = T3Form(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            #post.name = request.user
+            post.save()
+                #return redirect(index_page, pk=post.pk)
+    else:
+        form = T3Form()
+    return render(request, 'beatcount/final_step.html', {'form':form})
+    
 def test_page(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -22,6 +70,31 @@ def test_page(request):
     else:
         form = PostForm()
     return render(request, 'beatcount/test_page.html', {'form':form})
+    
+def test1(request):
+    if request.method == "POST":
+        form = Test1Form(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            #post.name = request.user
+            post.save()
+                #return redirect(index_page, pk=post.pk)
+    else:
+        form = Test1Form()
+    return render(request, 'beatcount/test1.html', {'form':form})
+
+def test2(request):
+    if request.method == "POST":
+        form = Test2Form(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            #post.name = request.user
+            post.save()
+                #return redirect(index_page, pk=post.pk)
+    else:
+        form = Test2Form()
+    return render(request, 'beatcount/test2.html', {'form':form})
+
 def jap_page(request):
     return render(request, 'beatcount/jap_page.html', {})
 def eng_page(request):
@@ -117,3 +190,4 @@ def register(request):
     return render(request, 'beatcount/register.html', {})
 def tables(request):
     return render(request, 'beatcount/tables.html', {})
+
