@@ -93,7 +93,7 @@ function InfoInput2() {
 
 function checkSend() {
     'use strict';
-    alert('送信しました．');
+    alert('送信しますので，Close入力後，ロードが終了するまで待機し，送信後実施者に終了の連絡をしてください．');
     location.href = 'training.html';
     
 }
