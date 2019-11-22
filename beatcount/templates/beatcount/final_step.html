@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2>Final Step</h2>
-            <p>　最終ステップでは，動画の視聴は行わず，確認問題5問だけを実施します．こちらで5問中3問に正解すると，訓練を終了します．
+            <p>　最終ステップでは，動画の視聴は行わず，音楽だけで学習してもらいます．提示した5曲で十分学習した後，確認問題5問を実施します．こちらで5問中3問に正解すると，訓練を終了します．
                 </p>
                 <a href="#Name" class="btn btn-circle js-scroll-trigger">
                     <i class="fa fa-angle-double-down animated"></i>
@@ -58,13 +58,115 @@
                 
                 <ul class="list-inline banner-social-buttons">
                     <li class="list-inline-item">
-                        <a href="#track01" class="btn btn-default btn-lg">
+                        <a href="#lTrack01" class="btn btn-default btn-lg">
                             <span id="hit" onClick ="InfoInput2();" class="network-name">Start</span>
                         </a>
                     </li>
                     
                 </ul>
                 
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="lTrack01" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 1 : BPM 128</h2>
+                <audio controls >
+                    <source src="{% static 'media/3rdTraining1.mp3' %}" type ="audio/mp3">
+                </audio>
+                <br></br>
+                <a href="#lTrack02" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="lTrack02" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 2 : BPM 128</h2>
+                <audio controls>
+                    <source src="{% static 'media/3rdTraining2.mp3' %}" type ="audio/mp3">
+                </audio>
+                <br></br>
+                <a href="#lTrack03" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="lTrack03" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 3 : BPM 110</h2>
+                <audio controls>
+                    <source src="{% static 'media/3rdTraining3.mp3' %}" type ="audio/mp3">
+                </audio>
+                <br></br>
+                <a href="#lTrack04" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="lTrack04" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 4 : BPM 104</h2>
+                <audio controls>
+                    <source src="{% static 'media/3rdTraining4.mp3' %}" type ="audio/mp3">
+                </audio>
+                <br></br>
+                <a href="#lTrack05" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="lTrack05" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Track 5 : BPM 90</h2>
+                <audio controls >
+                    <source src="{% static 'media/3rdTraining5.mp3' %}" type ="audio/mp3">
+                </audio>
+                <br></br>
+                <a href="#blank" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blank" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>確認問題</h2>
+                <p>
+                続いて確認問題5問に移行します．学習した後に解答お願いします．
+                問題に使用した楽曲は動画内で使用したものと同様です．
+                </p>
+                <a href="#track01" class="btn btn-circle js-scroll-trigger">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
             </div>
         </div>
     </div>
