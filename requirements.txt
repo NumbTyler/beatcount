@@ -11,7 +11,7 @@ stevedore==1.30.1
 scipy==1.2.2
 pyOpenSSL==19.0.0
 gunicorn==19.9.0
-Django==2.2.7
+Django==2.2.8
 dj-database-url==0.5.0
 django-heroku==0.3.1
 django-bootstrap4==0.0.8
